@@ -65,3 +65,28 @@
 .far {
   background-color: yellow;
 }
+#main-board {
+    margin-left: 100px;
+}
+#sequence {
+    margin-left: 110px;
+    margin-top: 20px;
+}
+#instruction {
+    margin-left: 10px;
+}
+.click-tile {
+    margin-left: 20px;
+}
+#one {
+    background-color: red;
+}
+#two {
+    background-color: blue;
+}
+#three {
+    background-color: green;
+}
+#four {
+    background-color: yellow;
+}
