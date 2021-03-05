@@ -1,0 +1,67 @@
+#game-name {
+  text-align: center;
+  font-size: 28px;
+  color: blueviolet;
+}
+.tile {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 1px 0px 1px 0px;
+  position: relative;
+  float: left;
+}
+.number {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.label {
+  position: absolute;
+  margin: 5px;
+}
+.link {
+  height: 10px;
+  width: 10px;
+  border-radius: 0px;
+  background-color: black;
+  margin-top: 30px;
+}
+.link-vertical {
+  height: 20px;
+  width: 10px;
+  border-radius: 0px;
+  background-color: black;
+  margin-left: 260px;
+}
+.link-vertical-left {
+  height: 20px;
+  width: 10px;
+  border-radius: 0px;
+  background-color: black;
+  margin-left: 20px;
+}
+#first-row {
+  height: 50px;
+  width: 500px;
+}
+#second-row {
+  height: 50px;
+  width: 500px;
+}
+#third-row {
+  height: 50px;
+  width: 500px;
+}
+#fourth-row {
+  height: 50px;
+  width: 500px;
+}
+#fifth-row {
+  height: 50px;
+  width: 500px;
+}
+.far {
+  background-color: yellow;
+}
