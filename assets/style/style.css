@@ -1,7 +1,6 @@
 #game-name {
   text-align: center;
   font-size: 28px;
-  color: blueviolet;
 }
 .tile {
   height: 50px;
@@ -44,61 +43,77 @@
 }
 #first-row {
   height: 50px;
-  width: 310px;
+  width: 500px;
 }
 #second-row {
   height: 50px;
-  width: 310px;
-}
-#second-row .main-tile {
-    float: right;
-}
-#second-row .link {
-    float: right;
+  width: 500px;
 }
 #third-row {
   height: 50px;
-  width: 310px;
+  width: 500px;
 }
 #fourth-row {
   height: 50px;
-  width: 310px;
-}
-#fourth-row .main-tile {
-  float: right;
-}
-#fourth-row .link {
-  float: right;
+  width: 500px;
 }
 #fifth-row {
   height: 50px;
-  width: 310px;
+  width: 500px;
 }
 .far {
   background-color: yellow;
 }
-#main-board {
-    margin-left: 100px;
-}
 #sequence {
-    margin-left: 110px;
+    width: 500px;
+    height: 80px;
+    margin-left: 40px;
     margin-top: 20px;
 }
-#instruction {
-    margin-left: 10px;
+#answer {
+  width: 500px;
+  height: 80px;
+    margin-left: 40px;
+    margin-top: 20px;
 }
 .click-tile {
-    margin-left: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-left: 10px;
+  margin-top: 20px;
+  float: left;
 }
 #one {
-    background-color: red;
+  background-color: red;
 }
 #two {
-    background-color: blue;
+  background-color: blue;
 }
 #three {
-    background-color: green;
+  background-color: green;
 }
 #four {
-    background-color: yellow;
+  background-color: yellow;
+}
+
+#answer-box {
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  font-size: 24px;
+  color: purple;
+}
+#tap-sequence {
+  width: 120px;
+  padding-top: 10px;
+  height: 40px;
+  text-align: center;
+}
+#your-answer {
+  width: 120px;
+  padding-top: 10px;
+  height: 40px;
+  text-align: center;
 }
