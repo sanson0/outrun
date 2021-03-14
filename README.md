@@ -31,3 +31,10 @@ As a player, I would like:-
 * to progress through the game so that I can escape danger.
 * a lot of interaction with the game so I feel involved.
 * an easy and hard mode so I can remain challenged as I improve at the game.
+
+##Bugs and design issues
+A problem occurred with the sequence of colours. The colours are produced randomly by JavaScript
+code and the player has to tap or click the correct sequence. If the same colour is repeated eg.
+blue, red, red, green then it is not clear if four colours or three were displayed and it is not clear
+what to tap or click in response. The problem was solved by displaying white tiles between all colours
+within the sequence. 
