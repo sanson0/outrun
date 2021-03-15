@@ -152,16 +152,16 @@ function lookUp() {
 
 myElementA = document.getElementById("answer-one");
 let colorNumber1 = myElementA.innerHTML;
-console.log(colorNumber1);
+
 myElementB = document.getElementById("answer-two");
 let colorNumber2 = myElementB.innerHTML;
-console.log(colorNumber2);
+
 myElementC = document.getElementById("answer-three");
 let colorNumber3 = myElementC.innerHTML;
-console.log(colorNumber3);
+
 myElementD = document.getElementById("answer-four");
 let colorNumber4 = myElementD.innerHTML;
-console.log(colorNumber4);
+
 
 let colNumber1 = Number(colorNumber1);
 let colNumber2 = Number(colorNumber2);
@@ -190,4 +190,21 @@ else if (colNumber4 !== numRandom[3]) {
 console.log(resultArray);
 }
 setTimeout(function(){lookUp(); }, 10000);
+}
+
+
+tileStar = document.getElementsByClassName("starry");
+tileShadow = document.getElementsByClassName("main-tile");
+for ( let i=1; i < 25; i++ ) {
+  setTimeout(()=>{
+    console.log(i);
+    tileStar[i].innerHTML = `<i class="far fa-star">`;
+    if (i>3) {
+        tileShadow[i-4].style.backgroundColor = 'black';
+        
+    }
+    if (i>1) {
+       tileStar[i-1].innerHTML = "";
+    }
+  },i*1000);
 }

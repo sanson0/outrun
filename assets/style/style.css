@@ -43,23 +43,35 @@
 }
 #first-row {
   height: 50px;
-  width: 500px;
+  width: 310px;
 }
 #second-row {
   height: 50px;
-  width: 500px;
+  width: 310px;
+}
+#second-row .main-tile{
+    float: right;
+}
+#second-row .link {
+    float: right;
 }
 #third-row {
   height: 50px;
-  width: 500px;
+  width: 310px;
 }
 #fourth-row {
   height: 50px;
-  width: 500px;
+  width: 310px;
+}
+#fourth-row .main-tile{
+    float: right;
+}
+#fourth-row .link {
+    float: right;
 }
 #fifth-row {
   height: 50px;
-  width: 500px;
+  width: 310px;
 }
 .far {
   background-color: yellow;
