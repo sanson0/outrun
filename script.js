@@ -147,4 +147,47 @@ buttonThree.addEventListener("click", ansThree);
 let buttonFour=document.getElementById("four");
 buttonFour.addEventListener("click", ansFour);
 
+//new array
+function lookUp() {
+
+myElementA = document.getElementById("answer-one");
+let colorNumber1 = myElementA.innerHTML;
+console.log(colorNumber1);
+myElementB = document.getElementById("answer-two");
+let colorNumber2 = myElementB.innerHTML;
+console.log(colorNumber2);
+myElementC = document.getElementById("answer-three");
+let colorNumber3 = myElementC.innerHTML;
+console.log(colorNumber3);
+myElementD = document.getElementById("answer-four");
+let colorNumber4 = myElementD.innerHTML;
+console.log(colorNumber4);
+
+let colNumber1 = Number(colorNumber1);
+let colNumber2 = Number(colorNumber2);
+let colNumber3 = Number(colorNumber3);
+let colNumber4 = Number(colorNumber4);
+
+let myBox = document.getElementById('answer-box');
+if (colNumber1 !== numRandom[0]) {
+  myBox.innerHTML = "<h1>Better luck next time...</h1>";
+}
+else if (colNumber2 !== numRandom[1]) {
+  myBox.innerHTML = "<h1>Better luck next time...</h1>";
+}
+else if (colNumber3 !== numRandom[2]) {
+  myBox.innerHTML = "<h1>Better luck next time...</h1>";
+}
+else if (colNumber4 !== numRandom[3]) {
+  myBox.innerHTML = "<h1>Better luck next time...</h1>";
+}
+ else {
+  myBox.innerHTML = "<h1>Well done!</h1>";
+    
+  }
+ console.log(numRandom);
+ let resultArray = [colNumber1, colNumber2, colNumber3, colNumber4];
+console.log(resultArray);
+}
+setTimeout(function(){lookUp(); }, 10000);
 }
