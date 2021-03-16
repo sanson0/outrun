@@ -7,6 +7,7 @@ tileRow = document.getElementsByClassName("main-tile");
     }
 }
 
+function squareSequence() {
 var j = 0;
 for (let j=0; j < 4; j++) {
 let numR = Math.floor(Math.random() * 4);
@@ -191,20 +192,73 @@ console.log(resultArray);
 }
 setTimeout(function(){lookUp(); }, 10000);
 }
-
+}
 
 tileStar = document.getElementsByClassName("starry");
 tileShadow = document.getElementsByClassName("main-tile");
-for ( let i=1; i < 25; i++ ) {
+for ( let k=1; k < 25; k++ ) {
+    var x;
+ if (k===1) {x=0;}
+ if (k===2) {x=0;}
+ if (k===3) {x=12000;}
+ if (k===4) {x=12000;}
+ if (k===5) {x=12000;}
+ if (k===6) {x=24000;}
+ if (k===7) {x=24000;}
+ if (k===8) {x=24000;}
+ if (k===9) {x=36000;}
+ if (k===10) {x=36000;}
+ if (k===11) {x=48000;}
+ if (k===12) {x=48000;}
+ if (k===13) {x=48000;}
+ if (k===14) {x=60000;}
+ if (k===15) {x=60000;}
+ if (k===16) {x=72000;}
+ if (k===17) {x=72000;}
+ if (k===18) {x=84000;}
+ if (k===19) {x=84000;}
+ if (k===20) {x=84000;}
+ if (k===21) {x=96000;}
+ if (k===22) {x=96000;}
+ if (k===23) {x=96000;}
+ if (k===24) {x=108000;}
+ if (k===25) {x=108000;}
+
   setTimeout(()=>{
-    console.log(i);
-    tileStar[i].innerHTML = `<i class="far fa-star">`;
-    if (i>3) {
-        tileShadow[i-4].style.backgroundColor = 'black';
+    if (k===2) {
+    squareSequence();
+    }
+     if (k===5) {
+    squareSequence(); 
+    }
+    if (k===8) {
+    squareSequence(); 
+    }
+    if (k===10) {
+    squareSequence(); 
+    }
+    if (k===13) {
+    squareSequence(); 
+    }
+    if (k===15) {
+    squareSequence(); 
+    }
+    if (k===17) {
+    squareSequence(); 
+    }
+    if (k===20) {
+    squareSequence(); 
+    }
+    if (k===23) {
+    squareSequence(); 
+    }
+    tileStar[k].innerHTML = `<i class="far fa-star">`;
+    if (k>3) {
+        tileShadow[k-4].style.backgroundColor = 'black';
         
     }
-    if (i>1) {
-       tileStar[i-1].innerHTML = "";
+    if (k>1) {
+       tileStar[k-1].innerHTML = "";
     }
-  },i*1000);
+  },k*1000+x);
 }
