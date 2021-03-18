@@ -184,18 +184,22 @@ else if (colNumber4 !== numRandom[3]) {
 }
  else {
   myBox.innerHTML = "<h1>Well done!</h1>";
-    
   }
+  
  console.log(numRandom);
  let resultArray = [colNumber1, colNumber2, colNumber3, colNumber4];
 console.log(resultArray);
 }
 setTimeout(function(){lookUp(); }, 10000);
+let myBox = document.getElementById('answer-box');
+setTimeout(function(){myBox.innerHTML = "";},11500)
 }
 }
 
 tileStar = document.getElementsByClassName("starry");
 tileShadow = document.getElementsByClassName("main-tile");
+
+
 for ( let k=1; k < 25; k++ ) {
     var x;
  if (k===1) {x=0;}
@@ -223,8 +227,9 @@ for ( let k=1; k < 25; k++ ) {
  if (k===23) {x=96000;}
  if (k===24) {x=108000;}
  if (k===25) {x=108000;}
-
+     
   setTimeout(()=>{
+  
     if (k===2) {
     squareSequence();
     }
