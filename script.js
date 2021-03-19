@@ -60,6 +60,7 @@ if (j===2) {
 
 var numRandom = [numR0, numR1, numR2, numR];
 
+
 //count total number of clicks
 var button = document.getElementById("sequence");
 
@@ -71,10 +72,13 @@ button.onclick = function() {
 function ansOne() {
   
   var myElement1;
+ 
   if (count===1) {
     myElement1 = document.getElementById("answer-one");
+   
 } else if (count===2){
     myElement1 = document.getElementById("answer-two");
+    
   } else if (count===3) {
     myElement1 = document.getElementById("answer-three");
 } else {
@@ -228,7 +232,10 @@ for ( let k=1; k < 25; k++ ) {
  if (k===24) {x=108000;}
  if (k===25) {x=108000;}
      
-  setTimeout(()=>{
+ if (k===8) {
+    break;
+}  
+setTimeout(()=>{
   
     if (k===2) {
     squareSequence();

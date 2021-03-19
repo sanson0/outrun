@@ -2,6 +2,7 @@
   text-align: center;
   font-size: 28px;
 }
+
 .tile {
   height: 50px;
   width: 50px;
@@ -28,26 +29,36 @@
   margin-top: 30px;
 }
 .link-vertical {
+  margin: auto;
+  width: 310px;
   height: 20px;
-  width: 10px;
-  border-radius: 0px;
-  background-color: black;
-  margin-left: 260px;
+  position: relative;
 }
-.link-vertical-left {
+.link-vr {
   height: 20px;
   width: 10px;
   border-radius: 0px;
   background-color: black;
-  margin-left: 20px;
+  position: absolute;
+  margin-left: 285px;
+}
+.link-vl {
+  height: 20px;
+  width: 10px;
+  border-radius: 0px;
+  background-color: black;
+  position: absolute;
+  margin-left: 15px;
 }
 #first-row {
   height: 50px;
   width: 310px;
+  margin: auto;
 }
 #second-row {
   height: 50px;
   width: 310px;
+  margin: auto;
 }
 #second-row .main-tile{
     float: right;
@@ -58,10 +69,12 @@
 #third-row {
   height: 50px;
   width: 310px;
+  margin: auto;
 }
 #fourth-row {
   height: 50px;
   width: 310px;
+  margin: auto;
 }
 #fourth-row .main-tile{
     float: right;
@@ -72,20 +85,21 @@
 #fifth-row {
   height: 50px;
   width: 310px;
+  margin: auto;
 }
 .far {
   background-color: yellow;
 }
 #sequence {
-    width: 500px;
+    width: 400px;
     height: 80px;
-    margin-left: 40px;
+    margin: auto;
     margin-top: 20px;
 }
 #answer {
-  width: 500px;
+  width: 400px;
   height: 80px;
-    margin-left: 40px;
+    margin: auto;
     margin-top: 20px;
 }
 .click-tile {
@@ -116,6 +130,7 @@
   text-align: center;
   font-size: 24px;
   color: purple;
+  margin: auto;
 }
 #tap-sequence {
   width: 120px;
@@ -128,4 +143,16 @@
   padding-top: 10px;
   height: 40px;
   text-align: center;
+}
+#answer-one {
+    font-size: 0;
+}
+#answer-two {
+    font-size: 0;
+}
+#answer-three {
+    font-size: 0;
+}
+#answer-four {
+    font-size: 0;
 }
