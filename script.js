@@ -200,9 +200,9 @@ setTimeout(function(){myBox.innerHTML = "";},11500)
 }
 }
 
+function boardGame() {
 tileStar = document.getElementsByClassName("starry");
 tileShadow = document.getElementsByClassName("main-tile");
-
 
 for ( let k=1; k < 25; k++ ) {
     var x;
@@ -274,3 +274,18 @@ setTimeout(()=>{
     }
   },k*1000+x);
 }
+}
+
+
+let playButton= document.getElementById("play");
+playButton.addEventListener("click",boardGame);
+
+//count number of games played
+
+amount=0;
+playButton.onclick = function() {
+  amount +=1;
+
+let tally= document.getElementById("games-played");
+tally.innerHTML = "games played:"+ amount;
+};
