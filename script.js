@@ -174,22 +174,29 @@ let colNumber3 = Number(colorNumber3);
 let colNumber4 = Number(colorNumber4);
 
 let myBox = document.getElementById('answer-box');
+let yourAns = document.getElementById('your-ans');
 if (colNumber1 !== numRandom[0]) {
   myBox.innerHTML = "<h1>Better luck next time...</h1>";
+ yourAns.innerHTML = "1";
 }
 else if (colNumber2 !== numRandom[1]) {
   myBox.innerHTML = "<h1>Better luck next time...</h1>";
+ yourAns.innerHTML = "1";
 }
 else if (colNumber3 !== numRandom[2]) {
   myBox.innerHTML = "<h1>Better luck next time...</h1>";
+  yourAns.innerHTML = "1";
 }
 else if (colNumber4 !== numRandom[3]) {
   myBox.innerHTML = "<h1>Better luck next time...</h1>";
+  yourAns.innerHTML = "1";
 }
  else {
   myBox.innerHTML = "<h1>Well done!</h1>";
   }
   
+
+
  console.log(numRandom);
  let resultArray = [colNumber1, colNumber2, colNumber3, colNumber4];
 console.log(resultArray);
@@ -203,7 +210,8 @@ setTimeout(function(){myBox.innerHTML = "";},11500)
 function boardGame() {
 tileStar = document.getElementsByClassName("starry");
 tileShadow = document.getElementsByClassName("main-tile");
-
+ans = document.getElementById("your-ans");
+let z=1000;
 for ( let k=1; k < 25; k++ ) {
     var x;
  if (k===1) {x=0;}
@@ -230,18 +238,20 @@ for ( let k=1; k < 25; k++ ) {
  if (k===22) {x=96000;}
  if (k===23) {x=96000;}
  if (k===24) {x=108000;}
- if (k===25) {x=108000;}
-     
- if (k===8) {
-    break;
-}  
+ 
+ 
 setTimeout(()=>{
-  
+
+if (Number(ans.innerHTML)===1) {
+   
+   location.reload();
+}
+
     if (k===2) {
     squareSequence();
     }
      if (k===5) {
-    squareSequence(); 
+    squareSequence();
     }
     if (k===8) {
     squareSequence(); 
@@ -264,6 +274,13 @@ setTimeout(()=>{
     if (k===23) {
     squareSequence(); 
     }
+amount=0;
+if (k===24) {
+  amount +=1;
+
+let tally= document.getElementById("games-played");
+tally.innerHTML = "games won in a row:"+ amount;
+};
     tileStar[k].innerHTML = `<i class="far fa-star">`;
     if (k>3) {
         tileShadow[k-4].style.backgroundColor = 'black';
@@ -272,20 +289,26 @@ setTimeout(()=>{
     if (k>1) {
        tileStar[k-1].innerHTML = "";
     }
-  },k*1000+x);
-}
+    
+
+  },k*z+x);
+  }
 }
 
-
+function cancelError () {
+    document.getElementById("your-ans").innerHTML="0";
+}
+function clearBoard () {
+    tileStar = document.getElementsByClassName("starry");
+   var i;
+    for (i=1; i < 25; i++ ) {
+    tileStar[i].innerHTML="";
+    }
+}
 let playButton= document.getElementById("play");
+playButton.addEventListener("click",cancelError);
+playButton.addEventListener("click",clearBoard);
 playButton.addEventListener("click",boardGame);
 
 //count number of games played
 
-amount=0;
-playButton.onclick = function() {
-  amount +=1;
-
-let tally= document.getElementById("games-played");
-tally.innerHTML = "games played:"+ amount;
-};
