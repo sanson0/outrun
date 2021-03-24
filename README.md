@@ -1,40 +1,74 @@
-# outrun
+# Outrun
+
 A memory game for milestone 2 project
 
 ## User Experience
 
 Purpose of this project:-
-Entertainment
-Improve memoryImprove coordination
+* Entertainment
+* Improve memory
+* Improve coordination
 
 Wireframes
+[link to wireframe view of the game](assets/docs/Outrun.pdf)
 
 ## Features
 
 * Boardgame with 25 tiles
 * The player is represented by a star that moves from tile to tile
-* When the player reaches a question mark, the tiles begin to show a sequence of coloured shapes.
-* Shapes consist of a square, triangle, diamond and rectangle.
+* When the player reaches a question mark, the tiles begin to show a sequence of colours.
+The colours are shown as background colours of the tiles, so the boardgame still shows.
 * Colours consist of red, blue, green and yellow.
-* When the sequence ends, the player is asked to type in the sequence according to colour or shape, this is decided randomly by the program.
-* The tiles revert to the boardgame mode.
-* If the player gets it right, then the player keeps moving.
-* If the player gets it wrong, then the player pauses before moving again.
+* When the sequence ends, the player is asked to type in the sequence according to colour,
+ which is decided randomly by the program.
+* If the player gets it right, then the player keeps moving. Number of games won is recorded in a tally.
+* If the player gets it wrong, then the game stops and resets, progress is lost in terms of the tally.
 * After a short while, the beginning tiles turn black, this is the shadow chasing the player.
-* If there are too many wrong answers, the shadow can catch the player and the player loses that game.
-* If there are enough right answers, the player can outrun the shadow and win that game.
+* There is an explanation section containing rules of the game.
 
 ## User stories
 
 As a player, I would like:-
+* to be entertained!
 * a game that requires memorising patterns so that I can improve my memory
+* a gae that requires coordination so that I can improve it.
 * to progress through the game so that I can escape danger.
 * a lot of interaction with the game so I feel involved.
 * an easy and hard mode so I can remain challenged as I improve at the game.
 
-##Bugs and design issues
-A problem occurred with the sequence of colours. The colours are produced randomly by JavaScript
-code and the player has to tap or click the correct sequence. If the same colour is repeated eg.
-blue, red, red, green then it is not clear if four colours or three were displayed and it is not clear
-what to tap or click in response. The problem was solved by displaying white tiles between all colours
-within the sequence. 
+## Bugs and design issues
+
+A design problem occurred with the sequence of colours. The colours are produced randomly by JavaScript
+code and the player has to tap or click the correct sequence. If the same colour is repeated next in the
+sequence eg. blue, red, red, green then it is not clear if four colours or three were displayed and it 
+is not clear what to tap or click in response. The problem was solved by displaying white tiles between
+all colours within the sequence. This makes the user experience much better because it is obvious what to do.
+
+A slight code problem occurred when trying to move the star around the board, following the numbers in order.
+When the star reached the ends of rows 1 and 3, it continued from left to right on rows 2 and 4. This was not
+intended when the game was designed. This was fairly easy to fix using the instruction 'float: right' in CSS.
+The tiles were ordered from right to left on rows 2 and 4 allowing JavaScript code to move the star from tile 1
+to 25 in order.
+
+One of the features of the game is to stop the progress of the star around the board if an answering
+sequence goes wrong. This proved quite tricky to implement, with different methods tried.
+
+Break statements don't work well in nested if statements, the break statement acts on the if statement instead
+of the loop. The switch command (recommended by stackoverflow) was tried but did not give consistent results.
+The code had to be rewritten in a different way in order to stop the game if an error was made on the sequence
+recollection. If a certain fault message is detected then the game is reset by reloading the browser.
+This prevents another problem from occurring. If the fault message was detected and the loop was made to stop
+by adjusting the loop number, the old game restarted as well as a new one when the play button was clicked.
+
+## Credits
+
+[geeks for geeks](www.geeksforgeeks.org) helped implement the for loop to allow a sequence to be set
+up of colours so there is a 1 sec delay each time:-
+setTimeout(function(){square();}, 1000*j);
+
+Thrown for a loop: understanding for loops and timeouts in JavaScript [free CodeCamp](www.freeCodeCamp.org)
+
+Thanks to Mentor Nishant for advice on how many features to include in the game (so it was not too complicated),
+lots of advice on how to simplify code so that there is less of it, improving maintainability, decreasing 
+probability of bugs, improving understanding of code for someone new to the project. Also, suggestions on
+improving user experience, explanation of rules of game, tips on making the game's appearance look better.
