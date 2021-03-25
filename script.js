@@ -1,46 +1,33 @@
+let tileRow;
+const NUMBER_OF_TILES = 25; // This number represents number of blocks in game.
+const NUMBER_OF_COLORS = 4; // This number represents number of colours in sequence.
 function squareWhite() {
   
 tileRow = document.getElementsByClassName("main-tile");
-  var i;
-    for (i=0; i < 25; i++ ) {
-   tileRow[i].style.backgroundColor = 'white';
+  
+    for (let index=0; index < NUMBER_OF_TILES; index++ ) {
+   tileRow[index].style.backgroundColor = 'white';
     }
 }
-
 function squareSequence() {
 var j = 0;
-for (let j=0; j < 4; j++) {
-let numR = Math.floor(Math.random() * 4);
+for (let j=0; j < NUMBER_OF_COLORS; j++) {
+let numR = Math.floor(Math.random() * NUMBER_OF_COLORS);
 
 function square() {
-  if (numR === 0) {
-tileRow = document.getElementsByClassName("main-tile");
-  var i;
-    for (i=0; i < 25; i++ ) {
-   tileRow[i].style.backgroundColor = 'red';
-    }
-  }
-  else if (numR === 1) {
-tileRow = document.getElementsByClassName("main-tile");
-  var i;
-    for (i=0; i < 25; i++ ) {
-    tileRow[i].style.backgroundColor = 'blue';
-    }
-   } 
-   else if (numR === 2) {
-   tileRow = document.getElementsByClassName("main-tile");
-  var i;
-    for (i=0; i < 25; i++ ) {
-    tileRow[i].style.backgroundColor = 'green';
-    }
-   }
-   else {
-tileRow = document.getElementsByClassName("main-tile");
-  var i;
-    for (i=0; i < 25; i++ ) {
-    tileRow[i].style.backgroundColor = 'yellow';
-      }
-   }
+let color = "yellow";
+
+      if (numR === 0) {
+            color = "red";
+      } else if (numR === 1) {
+            color = "blue";
+      } else if (numR === 2) {
+        color = 'green';
+      } 
+        tileRow = document.getElementsByClassName("main-tile");
+        for (let i = 0; i < NUMBER_OF_TILES; i++) {
+            tileRow[i].style.backgroundColor = color;
+        }
 setTimeout(function(){squareWhite();}, 500);
 }
 setTimeout(function(){ square(); }, 1000*j);
@@ -68,89 +55,40 @@ count = 1;
 button.onclick = function() {
   count +=1;
 };
+function setAnswerColors(color, value){
+              let elmAnswer;
 
-function ansOne() {
-  
-  var myElement1;
- 
-  if (count===1) {
-    myElement1 = document.getElementById("answer-one");
-   
-} else if (count===2){
-    myElement1 = document.getElementById("answer-two");
-    
-  } else if (count===3) {
-    myElement1 = document.getElementById("answer-three");
-} else {
-    myElement1 = document.getElementById("answer-four"); 
-}
-  
-  myElement1.style.backgroundColor="red";
-  
-  myElement1.innerHTML = "0"
-}
+              if (count === 1) {
+                  elmAnswer = document.getElementById("answer-one");
+              } else if (count === 2) {
+                  elmAnswer = document.getElementById("answer-two");
+              } else if (count === 3) {
+                  elmAnswer = document.getElementById("answer-three");
+              } else {
+                  elmAnswer = document.getElementById("answer-four");
+              }
 
-function ansTwo() {
-  
- var myElement2;
-  if (count===1) {
-    myElement2 = document.getElementById("answer-one");
-} else if (count===2){
-    myElement2 = document.getElementById("answer-two");
-  } else if (count===3) {
-    myElement2 = document.getElementById("answer-three");
-} else {
-    myElement2 = document.getElementById("answer-four"); 
-}
-  myElement2.style.backgroundColor="blue";
-  
-  myElement2.innerHTML = "1"
-}
+              elmAnswer.style.backgroundColor = color;
+              elmAnswer.innerHTML = value;
+    }
 
-function ansThree() {
-  
-  var myElement3;
-  if (count===1) {
-    myElement3 = document.getElementById("answer-one");
-} else if (count===2){
-    myElement3 = document.getElementById("answer-two");
-  } else if (count===3) {
-    myElement3 = document.getElementById("answer-three");
-} else {
-    myElement3 = document.getElementById("answer-four"); 
-}
-
-  myElement3.style.backgroundColor="green";
-  
-  myElement3.innerHTML = "2"
-}
-
-function ansFour() {
-  
- var myElement4;
-  if (count===1) {
-    myElement4 = document.getElementById("answer-one");
-} else if (count===2){
-    myElement4 = document.getElementById("answer-two");
-  } else if (count===3) {
-    myElement4 = document.getElementById("answer-three");
-} else {
-    myElement4 = document.getElementById("answer-four"); 
-}
-
-  myElement4.style.backgroundColor="yellow";
-  
-  myElement4.innerHTML = "3"
-}
-//player types in sequence
-let buttonOne = document.getElementById("one");
-buttonOne.addEventListener("click", ansOne);
-let buttonTwo = document.getElementById("two");
-buttonTwo.addEventListener("click", ansTwo);
-let buttonThree=document.getElementById("three");
-buttonThree.addEventListener("click", ansThree);
-let buttonFour=document.getElementById("four");
-buttonFour.addEventListener("click", ansFour);
+    //player types in sequence
+    let buttonOne = document.getElementById("one");
+    buttonOne.addEventListener("click", function(){
+        setAnswerColors("red", "0")
+    });
+    let buttonTwo = document.getElementById("two");
+    buttonTwo.addEventListener("click", function () {
+        setAnswerColors("blue", "1")
+    });
+    let buttonThree = document.getElementById("three");
+    buttonThree.addEventListener("click", function () {
+        setAnswerColors("green", "2")
+    });
+    let buttonFour = document.getElementById("four");
+    buttonFour.addEventListener("click", function () {
+        setAnswerColors("yellow", "3")
+    });
 
 //new array
 function lookUp() {
@@ -174,7 +112,7 @@ let colNumber3 = Number(colorNumber3);
 let colNumber4 = Number(colorNumber4);
 
 let myBox = document.getElementById('answer-box');
-let yourAns = document.getElementById('your-ans');
+let yourAns = document.getElementById('your-ans');
 if (colNumber1 !== numRandom[0]) {
   myBox.innerHTML = "<h1>Better luck next time...</h1>";
  yourAns.innerHTML = "1";
@@ -212,9 +150,10 @@ tileStar = document.getElementsByClassName("starry");
 tileShadow = document.getElementsByClassName("main-tile");
 ans = document.getElementById("your-ans");
 let z=1000;
-for ( let k=1; k < 25; k++ ) {
-    var x;
- if (k===1) {x=0;}
+//const valueMap = [undefined,0, 0, 12000, 12000, 12000, 24000, 24000, 24000, 36000, 36000, 48000, 48000, 48000, 6000, 6000, 72000, 72000, 84000, 84000, 84000, 96000, 96000, 108000, 108000]
+for ( let k=1; k < NUMBER_OF_TILES; k++ ) {
+  //  const x=valueMap[k];
+  if (k===1) {x=0;}
  if (k===2) {x=0;}
  if (k===3) {x=12000;}
  if (k===4) {x=12000;}
@@ -238,15 +177,16 @@ for ( let k=1; k < 25; k++ ) {
  if (k===22) {x=96000;}
  if (k===23) {x=96000;}
  if (k===24) {x=108000;}
- 
- 
 setTimeout(()=>{
 
 if (Number(ans.innerHTML)===1) {
    
    location.reload();
 }
-
+//const numberIn = [2, 5, 8, 10, 13, 15, 17, 20, 23];
+//if(numberIn.contains(k)){
+ //         squareSequence();
+  //    }
     if (k===2) {
     squareSequence();
     }
@@ -295,20 +235,6 @@ tally.innerHTML = "games won in a row:"+ amount;
   }
 }
 
-function cancelError () {
-    document.getElementById("your-ans").innerHTML="0";
-}
-function clearBoard () {
-    tileStar = document.getElementsByClassName("starry");
-   var i;
-    for (i=1; i < 25; i++ ) {
-    tileStar[i].innerHTML="";
-    }
-}
 let playButton= document.getElementById("play");
-playButton.addEventListener("click",cancelError);
-playButton.addEventListener("click",clearBoard);
+
 playButton.addEventListener("click",boardGame);
-
-//count number of games played
-
