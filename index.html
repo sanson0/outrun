@@ -3,16 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Outrun</title>
     <link href="assets/style/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <body>
     <header>
-      <h2 id="game-name">Outrun</h2>
+      <div id="game-name">
+          <div id="bigO" class="mini-tile">O</div>
+          <div id="bigU" class="mini-tile">U</div>
+          <div id="bigT" class="mini-tile">T</div>
+          <div id="bigR" class="mini-tile">R</div>
+          <div id="big-U" class="mini-tile">U</div>
+          <div id="bigN" class="mini-tile">N</div>
+          <div id="big-arrow"><i class="fas fa-arrow-circle-right"></i></div>
+      </div>
     </header>
     <section>
-        <div id="play">Play</div>
+        <div id="play">
+            Play <br>
+            <i class="fas fa-arrow-right"></i>
+        </div>
         <div id="games-played"></div>
         <div id="main-board">
             <div id="first-row">
@@ -181,13 +192,14 @@
             You answered
             <span id="your-ans">0</span>
             </div>
-            <div id="answer-one" class="click-tile"> </div>
+            <div id="answer-one" class="click-tile"></div>
             <div id="answer-two" class="click-tile"></div>
             <div id="answer-three" class="click-tile"></div>
             <div id="answer-four" class="click-tile"></div>
+            <div id="answer-box">?</div>
         </div>
-        <div id="answer-box">?</div>
     </section>
+    
     <footer></footer>
     <script src="script.js"></script>
   </body>

@@ -1,17 +1,80 @@
 #game-name {
-  text-align: center;
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 900;
+  width: 360px;
+  height: 40px;
+  margin: auto;
+  position: relative;
 }
-
+.mini-tile {
+    width: 40px;
+    height: 30px;
+    float: left;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: absolute;
+    padding-bottom: 3px;
+    
+}
+#bigO {
+    color: red;
+    background-color: yellow;
+    margin-left: 0px;
+    text-align: center;
+    padding-top: 10px;
+}
+#bigU {
+    color: blue;
+    background-color: yellow;
+    margin-left: 50px;
+    text-align: center;
+    padding-top: 10px;
+}
+#bigT {
+    color: green;
+    background-color: yellow;
+    margin-left: 100px;
+    text-align: center;
+    padding-top: 10px;
+}
+#bigR {
+    color: red;
+    background-color: yellow;
+    margin-left: 150px;
+    text-align: center;
+    padding-top: 10px;
+}
+#big-U {
+    color: blue;
+    background-color: yellow;
+    margin-left: 200px;
+    text-align: center;
+    padding-top: 10px;
+}
+#bigN {
+    color: green;
+    background-color: yellow;
+    margin-left: 250px;
+    text-align: center;
+    padding-top: 10px;
+}
+#big-arrow {
+    margin-left: 300px; 
+    padding-top: 10px;  
+}
 #play {
-    height: 20px;
-    width: 50px;
+    height: 40px;
+    width: 60px;
     margin: auto;
+    margin-top: 10px;
     background-color: lightgreen;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: 2px solid black;
 }
 #games-played {
     height: 10px;
@@ -19,12 +82,15 @@
     margin: auto;
     margin-bottom: 10px;
 }
+#main-board {
+    margin: auto;
+    
+}
 .tile {
-  height: 50px;
-  width: 50px;
-  border-radius: 10px;
-  border: 1px solid black;
-  margin: 1px 0px 1px 0px;
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  border: 2px solid black;
   position: relative;
   float: left;
 }
@@ -35,31 +101,34 @@
 }
 .label {
   position: absolute;
-  margin: 5px;
+  margin: 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .link {
   height: 10px;
   width: 10px;
   border-radius: 0px;
   background-color: black;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 .link-vertical {
   margin: auto;
-  width: 310px;
-  height: 20px;
+  width: 280px;
+  height: 15px;
   position: relative;
 }
 .link-vr {
-  height: 20px;
+  height: 15px;
   width: 10px;
   border-radius: 0px;
   background-color: black;
   position: absolute;
-  margin-left: 285px;
+  margin-left: 245px;
 }
 .link-vl {
-  height: 20px;
+  height: 15px;
   width: 10px;
   border-radius: 0px;
   background-color: black;
@@ -67,13 +136,13 @@
   margin-left: 15px;
 }
 #first-row {
-  height: 50px;
-  width: 310px;
+  height: 40px;
+  width: 280px;
   margin: auto;
 }
 #second-row {
-  height: 50px;
-  width: 310px;
+  height: 40px;
+  width: 280px;
   margin: auto;
 }
 #second-row .main-tile{
@@ -83,13 +152,13 @@
     float: right;
 }
 #third-row {
-  height: 50px;
-  width: 310px;
+  height: 40px;
+  width: 280px;
   margin: auto;
 }
 #fourth-row {
-  height: 50px;
-  width: 310px;
+  height: 40px;
+  width: 280px;
   margin: auto;
 }
 #fourth-row .main-tile{
@@ -99,8 +168,8 @@
     float: right;
 }
 #fifth-row {
-  height: 50px;
-  width: 310px;
+  height: 40px;
+  width: 280px;
   margin: auto;
 }
 .far {
@@ -108,21 +177,21 @@
 }
 #sequence {
     width: 400px;
-    height: 80px;
+    height: 40px;
     margin: auto;
     margin-top: 10px;
 }
 #answer {
   width: 400px;
-  height: 80px;
+  height: 40px;
     margin: auto;
     margin-top: 10px;
 }
 .click-tile {
-  height: 50px;
-  width: 50px;
-  border-radius: 10px;
-  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  border: 2px solid black;
   margin-left: 10px;
   margin-top: 20px;
   float: left;
@@ -139,26 +208,18 @@
 #four {
   background-color: yellow;
 }
-
-#answer-box {
-  height: 50px;
-  width: 100px;
-  text-align: center;
-  font-size: 24px;
-  color: purple;
-  margin: auto;
-}
 #tap-sequence {
   width: 120px;
   padding-top: 10px;
-  height: 40px;
+  height: 30px;
   text-align: center;
 }
 #your-answer {
   width: 120px;
   padding-top: 10px;
-  height: 40px;
+  height: 30px;
   text-align: center;
+  position: relative;
 }
 #answer-one {
     font-size: 0;
@@ -172,6 +233,20 @@
 #answer-four {
     font-size: 0;
 }
-/*#your-ans {
+#your-ans {
     font-size: 0;
-}*/
+}
+#answer-box {
+  height: 35px;
+  width: 350px;
+  text-align: center;
+  font-size: 24px;
+  color: purple;
+  float: none;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 8px;
+  position: absolute;
+  margin-top: 100px;
+  padding-top: 5px;
+}

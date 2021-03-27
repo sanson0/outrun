@@ -115,23 +115,23 @@ function squareSequence() {
     let myBox = document.getElementById('answer-box');
     let yourAns = document.getElementById('your-ans');
     if (colNumber1 !== numRandom[0]) {
-        myBox.innerHTML = "<h1>Better luck next time...</h1>";
+        myBox.innerHTML = "Better luck next time...";
         yourAns.innerHTML = "1";
         }
     else if (colNumber2 !== numRandom[1]) {
-        myBox.innerHTML = "<h1>Better luck next time...</h1>";
+        myBox.innerHTML = "Better luck next time...";
         yourAns.innerHTML = "1";
     }
     else if (colNumber3 !== numRandom[2]) {
-        myBox.innerHTML = "<h1>Better luck next time...</h1>";
+        myBox.innerHTML = "Better luck next time...";
         yourAns.innerHTML = "1";
     }
     else if (colNumber4 !== numRandom[3]) {
-        myBox.innerHTML = "<h1>Better luck next time...</h1>";
+        myBox.innerHTML = "Better luck next time...";
         yourAns.innerHTML = "1";
     }
     else {
-        myBox.innerHTML = "<h1>Well done!</h1>";
+        myBox.innerHTML = "Well done!";
         yourAns.innerHTML = "0";
         }
     }
