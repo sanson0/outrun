@@ -7,7 +7,8 @@
     <link href="assets/style/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
-  <body>
+  <body id="backgroundimage">
+      
     <header>
       <div id="game-name">
           <div id="bigO" class="mini-tile">O</div>
@@ -20,6 +21,22 @@
       </div>
     </header>
     <section>
+        <div id="instructions">
+            <h2>Instructions</h2>
+            <ul>
+                <li>Press play button</li>
+                <li>Player is represented by a star</li>
+                <li>Star moves round the board</li>
+                <li>Star pauses over question marks</li>
+                <li>A colour sequence flashes on tiles</li>
+                <li>Click colour sequence on tiles below</li>
+                <li>If sequence is correct, game continues</li>
+                <li>If sequence is incorrect, game resets</li>
+                <li>If star reaches the finish, a game is won</li>
+                <li>A tally of games won in a row shows</li>
+            </ul>
+        </div>
+        <div id="stick-man"><img src="https://cdn.pixabay.com/photo/2014/04/03/00/40/runner-309053_960_720.png" alt=""></div>
         <div id="play">
             Play <br>
             <i class="fas fa-arrow-right"></i>
@@ -200,7 +217,9 @@
         </div>
     </section>
     
-    <footer></footer>
+    <footer>
+    </footer>
+ 
     <script src="script.js"></script>
   </body>
 </html>
