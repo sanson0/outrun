@@ -260,9 +260,14 @@
 }
 #instructions {
     float: left;
-    font-size: 18px;
+    font-size: 14px;
     color: red;
-
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 300px;
+    height: auto;
+    padding-left: 10px;
 }
 #stick-man {
     float: right;
@@ -276,8 +281,20 @@ img {
     height: auto;
 }
 ul {
-    color: blue;
+    color: black;
+    
 }
 #backgroundimage {
     background-image: url(https://cdn.pixabay.com/photo/2021/02/09/16/56/marble-5999144_960_720.jpg);
+}
+/* responsive design */
+@media screen and (max-width: 950px) {
+#instructions {
+    float: unset;
+    margin: auto;
+    margin-top: 20px;
+  }
+  #stick-man {
+      display: none;
+  }
 }
