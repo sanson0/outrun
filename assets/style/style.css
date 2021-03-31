@@ -14,8 +14,8 @@
     border-radius: 8px;
     position: absolute;
     padding-bottom: 3px;
-    
 }
+/*The title is spelt out in large letters on their own tiles (see mini-tile above*/
 #bigO {
     color: red;
     background-color: yellow;
@@ -62,6 +62,7 @@
     margin-left: 300px; 
     padding-top: 10px;  
 }
+/*Play button allows the player to start a new game*/
 #play {
     height: 40px;
     width: 60px;
@@ -95,11 +96,13 @@
   float: left;
   background-color: white;
 }
+/*All the board game tiles are numbered*/
 .number {
   position: absolute;
   bottom: 0px;
   right: 0px;
 }
+/*Start and finish are labelled on the board game*/
 .label {
   position: absolute;
   margin: 2px;
@@ -107,6 +110,7 @@
   text-transform: uppercase;
   font-weight: 700;
 }
+/*The board game tiles are linked to show the player where they are heading*/
 .link {
   height: 10px;
   width: 10px;
@@ -114,6 +118,7 @@
   background-color: black;
   margin-top: 15px;
 }
+/*Vertical link between tiles, right side(link-vr) or left side(link-vl)*/
 .link-vertical {
   margin: auto;
   width: 280px;
@@ -121,7 +126,7 @@
   position: relative;
 }
 .link-vr {
-  height: 15px;
+  height: 12px;
   width: 10px;
   border-radius: 0px;
   background-color: black;
@@ -129,13 +134,14 @@
   margin-left: 245px;
 }
 .link-vl {
-  height: 15px;
+  height: 12px;
   width: 10px;
   border-radius: 0px;
   background-color: black;
   position: absolute;
   margin-left: 15px;
 }
+/*Rows of the board game tiles*/
 #first-row {
   height: 40px;
   width: 280px;
@@ -146,6 +152,7 @@
   width: 280px;
   margin: auto;
 }
+/*Allows tile order to go from right to left on second row*/
 #second-row .main-tile{
     float: right;
 }
@@ -162,6 +169,7 @@
   width: 280px;
   margin: auto;
 }
+/*Allows tile order to go from right to left on fourth row*/
 #fourth-row .main-tile{
     float: right;
 }
@@ -173,15 +181,18 @@
   width: 280px;
   margin: auto;
 }
+/*Background colour of star representing player*/
 .far {
   background-color: yellow;
 }
+/*Row of coloured tiles to tap/ click*/
 #sequence {
     width: 400px;
     height: 40px;
     margin: auto;
     margin-top: 10px;
 }
+/*Row of coloured tiles to show answer*/
 #answer {
   width: 400px;
   height: 40px;
@@ -197,6 +208,7 @@
   margin-top: 20px;
   float: left;
 }
+/*coloured tiles to tap/ click*/
 #one {
   background-color: red;
 }
@@ -224,6 +236,8 @@
   position: relative;
   background-color: white;
 }
+/*Tiles to show sequence clicked/ tapped*/
+/*Tally of clicks/ taps*/
 #answer-one {
     font-size: 0;
     background-color: white;
@@ -243,12 +257,14 @@
 #your-ans {
     font-size: 0;
 }
+/*The answer box shows messages such as 'Well done!' or 'Better luck next time...'*/
 #answer-box {
   height: 35px;
   width: 350px;
   text-align: center;
   font-size: 24px;
-  color: purple;
+  font-style: italic;
+  color: black;
   float: none;
   margin: auto;
   border: 2px solid black;
@@ -269,6 +285,7 @@
     height: auto;
     padding-left: 10px;
 }
+/*Stick man image for fun*/
 #stick-man {
     float: right;
     max-width: 200px;
@@ -284,10 +301,11 @@ ul {
     color: black;
     
 }
+/* background image of blue marble*/
 #backgroundimage {
     background-image: url(https://cdn.pixabay.com/photo/2021/02/09/16/56/marble-5999144_960_720.jpg);
 }
-/* responsive design */
+/* responsive design - smaller than desktop */
 @media screen and (max-width: 950px) {
 #instructions {
     float: unset;

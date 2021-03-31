@@ -1,6 +1,8 @@
 let tileRow;
 const NUMBER_OF_TILES = 25; // This number represents number of blocks in game.
 const NUMBER_OF_COLORS = 4; // This number represents number of colours in sequence.
+
+// All board game tiles are turned white by this function
 function squareWhite() {
   
     tileRow = document.getElementsByClassName("main-tile");
@@ -9,13 +11,15 @@ function squareWhite() {
     tileRow[index].style.backgroundColor = 'white';
     }
 }
+//All tiles display a sequence of colours with this function
 function squareSequence() {
 
+//Four random numbers generated
     for (let j=0; j < NUMBER_OF_COLORS; j++) {
     let numR = Math.floor(Math.random() * NUMBER_OF_COLORS);
     function square() {
+//Random numbers changed to colours
         let color = "yellow";
-
         if (numR === 0) {
             color = "red";
         } else if (numR === 1) {
@@ -23,15 +27,16 @@ function squareSequence() {
         } else if (numR === 2) {
         color = 'green';
         } 
+//Colours displayed across all tiles of board game
         tileRow = document.getElementsByClassName("main-tile");
         for (let i = 0; i < NUMBER_OF_TILES; i++) {
         tileRow[i].style.backgroundColor = color;
         }
+//All tiles of board game turn white in between tiles displaying colours
     setTimeout(function(){squareWhite();}, 500);
     }
+//Delay between display of each sequence colour
     setTimeout(function(){ square(); }, 1000*j);
-
-
 
     // produce array
     if (j===0) {
@@ -47,7 +52,7 @@ function squareSequence() {
     let numRandom = [numR0, numR1, numR2, numR];
 
 
-    //count total number of clicks
+    //count total number of clicks 'Tap sequence here'
     let button = document.getElementById("sequence");
 
     count = 1;
