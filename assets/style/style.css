@@ -21,46 +21,53 @@
     background-color: yellow;
     margin-left: 0px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 2px;
 }
 #bigU {
     color: blue;
     background-color: yellow;
     margin-left: 50px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 2px;
 }
 #bigT {
     color: green;
     background-color: yellow;
     margin-left: 100px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 2px;
 }
 #bigR {
     color: red;
     background-color: yellow;
     margin-left: 150px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 2px;
 }
 #big-U {
     color: blue;
     background-color: yellow;
     margin-left: 200px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 2px;
 }
 #bigN {
     color: green;
     background-color: yellow;
     margin-left: 250px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 2px;
 }
 #big-arrow {
     margin-left: 300px; 
-    padding-top: 10px;  
+    padding-top: 10px; 
+    padding-bottom: 2px; 
 }
 /*Play button allows the player to start a new game*/
 #play {
@@ -192,6 +199,7 @@
     margin: auto;
     margin-top: 10px;
 }
+
 /*Row of coloured tiles to show answer*/
 #answer {
   width: 400px;
@@ -235,6 +243,7 @@
   text-align: center;
   position: relative;
   background-color: white;
+
 }
 /*Tiles to show sequence clicked/ tapped*/
 /*Tally of clicks/ taps*/
@@ -255,7 +264,7 @@
     background-color: white;
 }
 #your-ans {
-    font-size: 0;
+    font-size: 10;
 }
 /*The answer box shows messages such as 'Well done!' or 'Better luck next time...'*/
 #answer-box {
@@ -301,6 +310,7 @@ ul {
     color: black;
     
 }
+
 /* background image of blue marble*/
 #backgroundimage {
     background-image: url(https://cdn.pixabay.com/photo/2021/02/09/16/56/marble-5999144_960_720.jpg);
@@ -315,4 +325,170 @@ ul {
   #stick-man {
       display: none;
   }
+}
+/* responsive design - smaller than 450px */
+@media screen and (max-width: 450px) {
+#game-name {
+    width: 260px;
+     font-size: 20px;
+}
+.mini-tile {
+    width: 30px;
+    height: 20px;
+    padding-top: 5px;
+    border-radius: 6px;
+}
+#instructions {
+    float: unset;
+    margin: auto;
+    margin-top: 20px;
+  }
+  #stick-man {
+      display: none;
+  }
+  .tile {
+    height: 30px;
+    width: 30px;
+    border-radius: 6px;
+}
+#bigU {
+    margin-left: 40px;
+}
+#bigT {
+    margin-left: 80px;
+}
+#bigR {
+    margin-left: 120px;
+}
+#big-U {
+    margin-left: 160px;
+}
+#bigN {
+    margin-left: 200px;
+}
+#big-arrow {
+    margin-left: 240px;  
+}
+#instructions {
+    font-size: 12px;
+    width: 260px;
+}
+.tile {
+    height: 30px;
+    width: 30px;
+    border-radius: 6px;
+}
+.link {
+  height: 8px;
+  width: 8px;
+  border-radius: 0px;
+}
+.link-vr {
+  height: 12px;
+  width: 8px;
+  border-radius: 0px;
+  margin-left: 225px;
+}
+.link-vl {
+  height: 12px;
+  width: 8px;
+  border-radius: 0px;
+  margin-left: 40px;
+}
+#first-row {
+  height: 30px;
+  width: 220px;
+}
+#second-row {
+  height: 30px;
+  width: 220px;
+}
+#third-row {
+  height: 30px;
+  width: 220px;
+}
+#fourth-row {
+  height: 30px;
+  width: 220px;
+}
+#fifth-row {
+  height: 30px;
+  width: 220px;
+  margin-bottom: 20px;
+}
+.label {
+  position: absolute;
+  margin: 1px;
+  font-size: 8px;
+}
+.fa-question {
+    font-size: 10px;
+}
+.number {
+  font-size: 12px;
+}
+#sequence {
+    width: 180px;
+    height: 30px;
+    float: unset;
+}
+
+#answer-box {
+  height: 20px;
+  width: 260px;
+  font-size: 12px;
+  margin-top: 130px;
+}
+#sequence {
+    width: 260px;
+    height: 30px;
+}
+
+.click-tile {
+  height: 30px;
+  width: 30px;
+  margin-left: 15px;
+  margin-top: 15px;
+  
+}
+.click_t {
+    height: 30px;
+  width: 70px;
+  margin-left: 5px;
+  margin-top: 15px;
+  margin: auto;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+#answer {
+    width: 260px;
+}
+#answer-one {
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 25px;
+    width: 15px;
+    height: 15px;
+}
+#answer-two {
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 25px;
+    width: 15px;
+    height: 15px;
+}
+#answer-three {
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 25px;
+    width: 15px;
+    height: 15px;
+}
+#answer-four {
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 25px;
+    width: 15px;
+    height: 15px;
+}
 }
