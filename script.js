@@ -77,18 +77,22 @@ function squareSequence() {
     }
 
     //player types in sequence
-    let buttonOne = document.getElementById("one");
-    buttonOne.addEventListener("click", function(){
+    
+       let buttonOne = document.getElementById("one");
+    buttonOne.addEventListener("click", function () {
     setAnswerColors("red", "0")
     });
+
     let buttonTwo = document.getElementById("two");
     buttonTwo.addEventListener("click", function () {
     setAnswerColors("blue", "1")
     });
+    
     let buttonThree = document.getElementById("three");
     buttonThree.addEventListener("click", function () {
     setAnswerColors("green", "2")
     });
+
     let buttonFour = document.getElementById("four");
     buttonFour.addEventListener("click", function () {
     setAnswerColors("yellow", "3")
@@ -96,21 +100,25 @@ function squareSequence() {
 
     //new array
     function lookUp() {
-    //let colNum1;
+    let colNum1;
     colNum1 = document.getElementById("answer-one");
-    let colorNumber1 = colNum1.innerHTML;
+    let colorNumber1;
+    colorNumber1 = colNum1.innerHTML;
 
-    //let colNum2;
+    let colNum2;
     colNum2 = document.getElementById("answer-two");
-    let colorNumber2 = colNum2.innerHTML;
+    let colorNumber2;
+    colorNumber2 = colNum2.innerHTML;
 
-    //let colNum3;
+    let colNum3;
     colNum3 = document.getElementById("answer-three");
-    let colorNumber3 = colNum3.innerHTML;
+    let colorNumber3;
+    colorNumber3 = colNum3.innerHTML;
 
-    //let colNum4;
+    let colNum4;
     colNum4 = document.getElementById("answer-four");
-    let colorNumber4 = colNum4.innerHTML;
+    let colorNumber4;
+    colorNumber4 = colNum4.innerHTML;
 
     let colNumber1 = Number(colorNumber1);
     let colNumber2 = Number(colorNumber2);
@@ -140,7 +148,16 @@ function squareSequence() {
         yourAns.innerHTML = "0";
         }
     }
-    setTimeout(function(){lookUp(); }, 10000);
+    
+     setTimeout(function(){lookUp(); }, 10000);
+    setTimeout(function(){buttonOne.style.visibility = "hidden"; }, 500);
+    setTimeout(function(){buttonTwo.style.visibility = "hidden"; }, 500);
+    setTimeout(function(){buttonThree.style.visibility = "hidden"; }, 500);
+    setTimeout(function(){buttonFour.style.visibility = "hidden"; }, 500);
+    setTimeout(function(){buttonOne.style.visibility = "visible"; }, 4000);
+    setTimeout(function(){buttonTwo.style.visibility = "visible"; }, 4000);
+    setTimeout(function(){buttonThree.style.visibility = "visible"; }, 4000);
+    setTimeout(function(){buttonFour.style.visibility = "visible"; }, 4000);
     let myBox = document.getElementById('answer-box');
     setTimeout(function(){myBox.innerHTML = "";},11500)
     }

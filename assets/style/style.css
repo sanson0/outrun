@@ -216,6 +216,15 @@
   margin-top: 20px;
   float: left;
 }
+.click-tile-answer {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  border: 2px solid black;
+  margin-left: 10px;
+  margin-top: 20px;
+  float: left;
+}
 /*coloured tiles to tap/ click*/
 #one {
   background-color: red;
@@ -264,7 +273,7 @@
     background-color: white;
 }
 #your-ans {
-    font-size: 10;
+    font-size: 0;
 }
 /*The answer box shows messages such as 'Well done!' or 'Better luck next time...'*/
 #answer-box {
@@ -428,20 +437,18 @@ ul {
   font-size: 12px;
 }
 #sequence {
-    width: 180px;
+    width: 260px;
     height: 30px;
     float: unset;
 }
-
-#answer-box {
-  height: 20px;
-  width: 260px;
-  font-size: 12px;
-  margin-top: 130px;
+#answer {
+    width: 240px;
 }
-#sequence {
-    width: 260px;
-    height: 30px;
+#answer-box {
+  height: 30px;
+  width: 250px;
+  font-size: 18px;
+  margin-top: 120px;
 }
 
 .click-tile {
@@ -449,8 +456,17 @@ ul {
   width: 30px;
   margin-left: 15px;
   margin-top: 15px;
-  
 }
+.click-tile-answer {
+  border: 2px solid black;
+  margin-left: 5px;
+  margin-top: 20px;
+  float: left;
+  border-radius: 5px;
+  width: 15px;
+  height: 15px;
+}
+
 .click_t {
     height: 30px;
   width: 70px;
@@ -459,36 +475,5 @@ ul {
   margin: auto;
   border-radius: 8px;
   border: 2px solid black;
-}
-#answer {
-    width: 260px;
-}
-#answer-one {
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-top: 25px;
-    width: 15px;
-    height: 15px;
-}
-#answer-two {
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-top: 25px;
-    width: 15px;
-    height: 15px;
-}
-#answer-three {
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-top: 25px;
-    width: 15px;
-    height: 15px;
-}
-#answer-four {
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-top: 25px;
-    width: 15px;
-    height: 15px;
 }
 }
