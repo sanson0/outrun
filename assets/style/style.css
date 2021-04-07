@@ -85,10 +85,13 @@
     border: 2px solid black;
 }
 #games-played {
-    height: 10px;
+    height: 20px;
     width: 200px;
     margin: auto;
     margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
 }
 #main-board {
     margin: auto;
@@ -108,6 +111,12 @@
   position: absolute;
   bottom: 0px;
   right: 0px;
+}
+.number-large {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 12px;
 }
 /*Start and finish are labelled on the board game*/
 .label {
@@ -433,8 +442,8 @@ ul {
 .fa-question {
     font-size: 10px;
 }
-.number {
-  font-size: 12px;
+.number-large {
+  display: none;
 }
 #sequence {
     width: 260px;
@@ -475,5 +484,10 @@ ul {
   margin: auto;
   border-radius: 8px;
   border: 2px solid black;
+}
+}
+@media screen and (min-width: 450px) {
+.number-small {
+  display: none;
 }
 }

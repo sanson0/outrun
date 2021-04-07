@@ -128,19 +128,19 @@ function squareSequence() {
     let myBox = document.getElementById('answer-box');
     let yourAns = document.getElementById('your-ans');
     if (colNumber1 !== numRandom[0]) {
-        myBox.innerHTML = "Better luck next time...";
+        myBox.innerHTML = "You were caught...";
         yourAns.innerHTML = "1";
         }
     else if (colNumber2 !== numRandom[1]) {
-        myBox.innerHTML = "Better luck next time...";
+        myBox.innerHTML = "You were caught...";
         yourAns.innerHTML = "1";
     }
     else if (colNumber3 !== numRandom[2]) {
-        myBox.innerHTML = "Better luck next time...";
+        myBox.innerHTML = "You were caught...";
         yourAns.innerHTML = "1";
     }
     else if (colNumber4 !== numRandom[3]) {
-        myBox.innerHTML = "Better luck next time...";
+        myBox.innerHTML = "You were caught...";
         yourAns.innerHTML = "1";
     }
     else {
@@ -189,7 +189,9 @@ function boardGame() {
         amount +=1;
 
         let tally= document.getElementById("games-played");
-        tally.innerHTML = "games won in a row:"+ amount;
+        tally.innerHTML = "Games won in a row:"+ amount;
+        tally.style.backgroundColor = "yellow";
+        tally.style.border = "2px solid black"
         };
             tileStar[k].innerHTML = `<i class="far fa-star">`;
             if (k>3) {
