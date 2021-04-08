@@ -21,7 +21,7 @@
     background-color: yellow;
     margin-left: 0px;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 2px;
     padding-bottom: 2px;
 }
 #bigU {
@@ -29,7 +29,7 @@
     background-color: yellow;
     margin-left: 50px;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 2px;
     padding-bottom: 2px;
 }
 #bigT {
@@ -37,7 +37,7 @@
     background-color: yellow;
     margin-left: 100px;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 2px;
     padding-bottom: 2px;
 }
 #bigR {
@@ -45,7 +45,7 @@
     background-color: yellow;
     margin-left: 150px;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 2px;
     padding-bottom: 2px;
 }
 #big-U {
@@ -53,7 +53,7 @@
     background-color: yellow;
     margin-left: 200px;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 2px;
     padding-bottom: 2px;
 }
 #bigN {
@@ -61,7 +61,7 @@
     background-color: yellow;
     margin-left: 250px;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 2px;
     padding-bottom: 2px;
 }
 #big-arrow {
@@ -69,11 +69,15 @@
     padding-top: 10px; 
     padding-bottom: 2px; 
 }
+#game-controls {
+    height: 40px;
+    width: 200px;
+    margin: auto;
+}
 /*Play button allows the player to start a new game*/
 #play {
     height: 40px;
     width: 60px;
-    margin: auto;
     margin-top: 10px;
     background-color: lightgreen;
     font-size: 16px;
@@ -83,19 +87,42 @@
     border-radius: 5px;
     text-transform: uppercase;
     border: 2px solid black;
+    float: left;
+}
+#hard-mode {
+    height: 18px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 2px;
+    float: right;
+    background-color: yellow;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+#reset {
+    height: 18px;
+    width: 100px;
+    text-align: center;
+    margin-top: 2px;
+    float: right;
+    background-color: orange;
+    border-radius: 5px;
+    border: 2px solid black;
 }
 #games-played {
-    height: 20px;
+    height: 30px;
     width: 200px;
     margin: auto;
     margin-bottom: 10px;
+    margin-top: 30px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
 }
 #main-board {
     margin: auto;
-    
+    margin-top: 20px;
 }
 .tile {
   height: 40px;
@@ -148,6 +175,7 @@
   background-color: black;
   position: absolute;
   margin-left: 245px;
+  margin-top: 3px;
 }
 .link-vl {
   height: 12px;
@@ -156,6 +184,7 @@
   background-color: black;
   position: absolute;
   margin-left: 15px;
+  margin-top: 3px;
 }
 /*Rows of the board game tiles*/
 #first-row {
@@ -291,7 +320,7 @@
   text-align: center;
   font-size: 24px;
   font-style: italic;
-  color: black;
+  color: blue;
   float: none;
   margin: auto;
   border: 2px solid black;
@@ -326,9 +355,13 @@ img {
 }
 ul {
     color: black;
-    
 }
-
+#good-luck {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: red;
+    font-weight: 700;
+}
 /* background image of blue marble*/
 #backgroundimage {
     background-image: url(https://cdn.pixabay.com/photo/2021/02/09/16/56/marble-5999144_960_720.jpg);

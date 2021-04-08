@@ -32,11 +32,19 @@ function squareSequence() {
         for (let i = 0; i < NUMBER_OF_TILES; i++) {
         tileRow[i].style.backgroundColor = color;
         }
+        let time=500;
+//Check if hard mode button selected
+        let hardMode = document.getElementById("hard-mode");
+        if (hardMode.style.backgroundColor === "red") {
+        time=100;
+    }; 
 //All tiles of board game turn white in between tiles displaying colours
-    setTimeout(function(){squareWhite();}, 500);
+    setTimeout(function(){squareWhite();}, time);
     }
 //Delay between display of each sequence colour
-    setTimeout(function(){ square(); }, 1000*j);
+let times =1000;
+
+    setTimeout(function(){ square(); },times*j);
 
     // produce array
     if (j===0) {
@@ -148,16 +156,22 @@ function squareSequence() {
         yourAns.innerHTML = "0";
         }
     }
-    
+    let timer = 4000;
+    //Check if hard mode button selected
+  
+        let hardMode = document.getElementById("hard-mode");
+        if (hardMode.style.backgroundColor === "red") {
+        timer=6000;
+    };  
      setTimeout(function(){lookUp(); }, 10000);
     setTimeout(function(){buttonOne.style.visibility = "hidden"; }, 500);
     setTimeout(function(){buttonTwo.style.visibility = "hidden"; }, 500);
     setTimeout(function(){buttonThree.style.visibility = "hidden"; }, 500);
     setTimeout(function(){buttonFour.style.visibility = "hidden"; }, 500);
-    setTimeout(function(){buttonOne.style.visibility = "visible"; }, 4000);
-    setTimeout(function(){buttonTwo.style.visibility = "visible"; }, 4000);
-    setTimeout(function(){buttonThree.style.visibility = "visible"; }, 4000);
-    setTimeout(function(){buttonFour.style.visibility = "visible"; }, 4000);
+    setTimeout(function(){buttonOne.style.visibility = "visible"; }, timer);
+    setTimeout(function(){buttonTwo.style.visibility = "visible"; }, timer);
+    setTimeout(function(){buttonThree.style.visibility = "visible"; }, timer);
+    setTimeout(function(){buttonFour.style.visibility = "visible"; }, timer);
     let myBox = document.getElementById('answer-box');
     setTimeout(function(){myBox.innerHTML = "";},11500)
     }
@@ -203,7 +217,15 @@ function boardGame() {
         },k*z+x);
     }
 }
+let hardMode = document.getElementById("hard-mode");
+hardMode.addEventListener("click", function () {
+    hardMode.style.backgroundColor = "red"
+    });
+    
+let resetButton = document.getElementById("reset");
+    resetButton.addEventListener("click", function () {
+        location.reload();
+    });
 
 let playButton= document.getElementById("play");
-
 playButton.addEventListener("click",boardGame);
