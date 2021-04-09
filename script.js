@@ -164,14 +164,22 @@ let times =1000;
         timer=6000;
     };  
      setTimeout(function(){lookUp(); }, 10000);
-    setTimeout(function(){buttonOne.style.visibility = "hidden"; }, 500);
-    setTimeout(function(){buttonTwo.style.visibility = "hidden"; }, 500);
-    setTimeout(function(){buttonThree.style.visibility = "hidden"; }, 500);
-    setTimeout(function(){buttonFour.style.visibility = "hidden"; }, 500);
-    setTimeout(function(){buttonOne.style.visibility = "visible"; }, timer);
-    setTimeout(function(){buttonTwo.style.visibility = "visible"; }, timer);
-    setTimeout(function(){buttonThree.style.visibility = "visible"; }, timer);
-    setTimeout(function(){buttonFour.style.visibility = "visible"; }, timer);
+     function hideButtons() {
+        buttonOne.style.visibility = "hidden"; 
+        buttonTwo.style.visibility = "hidden";
+        buttonThree.style.visibility = "hidden";
+        buttonFour.style.visibility = "hidden";
+     }
+
+     function showButtons() {
+        buttonOne.style.visibility = "visible"; 
+        buttonTwo.style.visibility = "visible";
+        buttonThree.style.visibility = "visible";
+        buttonFour.style.visibility = "visible";
+     }
+     setTimeout(function(){hideButtons(); }, 500);
+     setTimeout(function(){showButtons(); }, timer);
+
     let myBox = document.getElementById('answer-box');
     setTimeout(function(){myBox.innerHTML = "";},11500)
     }
@@ -179,6 +187,7 @@ let times =1000;
 
 function boardGame() {
     tileStar = document.getElementsByClassName("starry");
+    tileStar[24].innerHTML = "";
     tileShadow = document.getElementsByClassName("main-tile");
     ans = document.getElementById("your-ans");
     let z=1000;
@@ -198,21 +207,16 @@ function boardGame() {
           squareSequence();
         }
 
-        amount=0;
-        if (k===24) {
-        amount +=1;
-
-        let tally= document.getElementById("games-played");
-        tally.innerHTML = "Games won in a row:"+ amount;
-        tally.style.backgroundColor = "yellow";
-        tally.style.border = "2px solid black"
-        };
             tileStar[k].innerHTML = `<i class="far fa-star">`;
             if (k>3) {
                 tileShadow[k-4].style.backgroundColor = 'black';
             }
             if (k>1) {
                 tileStar[k-1].innerHTML = "";
+            }
+            if (k===24) {
+                let tally= document.getElementById("games-played");
+                tally.innerHTML = "Well played!"
             }
         },k*z+x);
     }
@@ -228,4 +232,17 @@ let resetButton = document.getElementById("reset");
     });
 
 let playButton= document.getElementById("play");
+amount=0;
+        playButton.onclick = function() {
+        amount +=1;
+        tallyNumber=amount-1
+        let tally= document.getElementById("games-played");
+        tally.innerHTML = "Games won in a row:"+ tallyNumber;
+        tally.style.backgroundColor = "yellow";
+        tally.style.border = "2px solid black"
+        };
+
 playButton.addEventListener("click",boardGame);
+
+
+ 
