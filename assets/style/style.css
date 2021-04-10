@@ -1,77 +1,68 @@
 #game-name {
   font-size: 32px;
   font-weight: 900;
-  width: 360px;
+  width: 220px;
   height: 40px;
   margin: auto;
   position: relative;
+  background-color: yellow;
+  border-radius: 8px;
+  border: 2px solid black;
 }
-.mini-tile {
-    width: 40px;
-    height: 30px;
-    float: left;
-    border: 2px solid black;
-    border-radius: 8px;
-    position: absolute;
-    padding-bottom: 3px;
-}
+
 /*The title is spelt out in large letters on their own tiles (see mini-tile above*/
 #bigO {
     color: red;
-    background-color: yellow;
-    margin-left: 0px;
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
+    float: left;
 }
 #bigU {
     color: blue;
-    background-color: yellow;
-    margin-left: 50px;
+    margin-left: 15px;
+
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
+    float: left;
 }
 #bigT {
     color: green;
-    background-color: yellow;
-    margin-left: 100px;
+    margin-left: 15px;
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
+    float: left;
 }
 #bigR {
     color: red;
-    background-color: yellow;
-    margin-left: 150px;
+    margin-left: 15px;
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
+    float: left;
 }
 #big-U {
     color: blue;
-    background-color: yellow;
-    margin-left: 200px;
+    margin-left: 15px;
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
+    float: left;
 }
 #bigN {
     color: green;
-    background-color: yellow;
-    margin-left: 250px;
+    margin-left: 15px;
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
+    float: right;
 }
-#big-arrow {
-    margin-left: 300px; 
-    padding-top: 10px; 
-    padding-bottom: 2px; 
-}
+
 #game-controls {
     height: 40px;
-    width: 200px;
+    width: 250px;
     margin: auto;
 }
 /*Play button allows the player to start a new game*/
@@ -90,7 +81,7 @@
     float: left;
 }
 #hard-mode {
-    height: 18px;
+    height: 38px;
     width: 100px;
     text-align: center;
     margin-top: 10px;
@@ -101,11 +92,12 @@
     border: 2px solid black;
 }
 #reset {
-    height: 18px;
-    width: 100px;
+    height: 40px;
+    width: 60px;
     text-align: center;
-    margin-top: 2px;
-    float: right;
+    margin-top: 10px;
+    margin-left: 5px;
+    float: left;
     background-color: orange;
     border-radius: 5px;
     border: 2px solid black;
