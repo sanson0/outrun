@@ -182,6 +182,14 @@ let times =1000;
 
     let myBox = document.getElementById('answer-box');
     setTimeout(function(){myBox.innerHTML = "";},11500)
+    colNum1 = document.getElementById("answer-one");
+    colNum2 = document.getElementById("answer-two");
+    colNum3 = document.getElementById("answer-three");
+    colNum4 = document.getElementById("answer-four");
+    setTimeout(function(){colNum1.style.backgroundColor = "white";}, 11500)
+    setTimeout(function(){colNum2.style.backgroundColor = "white";}, 11500)
+    setTimeout(function(){colNum3.style.backgroundColor = "white";}, 11500)
+    setTimeout(function(){colNum4.style.backgroundColor = "white";}, 11500)
     }
 }
 

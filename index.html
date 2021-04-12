@@ -9,9 +9,8 @@
   </head>
 <!--Blue marble effect background-->
   <body id="backgroundimage">
-      
     <header>
-      <div id="game-name">
+        <div id="game-name">
 <!--Title on tiles-->
           <div id="bigO">O</div>
           <div id="bigU">U</div>
@@ -19,7 +18,7 @@
           <div id="bigR">R</div>
           <div id="big-U">U</div>
           <div id="bigN">N</div>
-      </div>
+        </div>
     </header>
     <section>
         <div id="instructions">
@@ -42,6 +41,27 @@
                 <li>Hard Mode changes the timings of the game!</li>
                 <p id="good-luck">Good Luck!</p>
             </ul>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn">Instructions</button>
+            <div class="dropdown-content">
+                Press play button<br>
+                Player is represented by a star<br>
+                Star moves round the board<br>
+                Star pauses over question marks<br>
+                A colour sequence flashes on tiles<br>
+                Click colour sequence on tiles below<br>
+                If sequence is correct, game continues<br>
+                If sequence is incorrect, game resets<br>
+                Tiles turn black four tiles behind the star<br>
+                Black tiles represent the shadow chasing the player<br>
+                If star reaches the finish, a game is won<br>
+                A tally of games won in a row shows<br>
+                A feedback message appears in the bottom box<br>
+                If you like, click 'Hard Mode' then 'Play'<br>
+                Hard Mode changes the timings of the game!<br>
+                <p id="good-luck">Good Luck!</p>
+            </div>
         </div>
 <!--Image of a stick man used on right of desktop display-->
         <div id="stick-man"><img src="https://cdn.pixabay.com/photo/2014/04/03/00/40/runner-309053_960_720.png" alt=""></div>
@@ -87,7 +107,7 @@
                     <span class="number">4</span>
                 </div>
                 <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="tile main-tile adjust">
                     <div class="starry"></div>
                     <span class="number">5</span>
                 </div>
@@ -96,7 +116,7 @@
                 <div class="link-vr"></div>
             </div>
             <div id="second-row">
-                <div class="tile main-tile">
+                <div class="tile main-tile adjust-up">
                     <div class="starry"></div>
                     <span class="number">6</span>
                     <span><i class="fas fa-question"></i></span>
@@ -118,7 +138,7 @@
                     <span><i class="fas fa-question"></i></span>
                 </div>
                 <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="tile main-tile adjust">
                     <div class="starry"></div>
                     <span class="number">10</span>
                 </div>
@@ -127,7 +147,7 @@
                 <div class="link-vl"></div>
             </div>
             <div id="third-row">
-                <div class="tile main-tile">
+                <div class="tile main-tile adjust-up">
                     <div class="starry"></div>
                     <span class="number">11</span>
                     <span><i class="fas fa-question"></i></span>
@@ -149,7 +169,7 @@
                     <span><i class="fas fa-question"></i></span>
                 </div>
                 <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="tile main-tile adjust">
                     <div class="starry"></div>
                     <span class="number">15</span>
                 </div>
@@ -158,7 +178,7 @@
                 <div class="link-vr"></div>
             </div>
             <div id="fourth-row">
-                <div class="tile main-tile">
+                <div class="tile main-tile adjust-up">
                     <div class="starry"></div>
                     <span class="number">16</span>
                     <span><i class="fas fa-question"></i></span>
@@ -180,7 +200,7 @@
                     <span class="number">19</span>
                 </div>
                 <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="tile main-tile adjust">
                     <div class="starry"></div>
                     <span class="number">20</span>
                 </div>
@@ -189,7 +209,7 @@
                 <div class="link-vl"></div>
             </div>
             <div id="fifth-row">
-                <div class="tile main-tile">
+                <div class="tile main-tile adjust-up">
                     <div class="starry"></div>
                     <span class="number">21</span>
                     <span><i class="fas fa-question"></i></span>
@@ -221,7 +241,7 @@
         </div>
 <!--The buttons labelled one to four are to be clicked or tapped to provide correct sequence-->
         <div id="sequence">
-            <div id="tap-sequence" class="click-tile">Tap sequence here</div>
+            <div id="tap-sequence" class="click-tile">Tap sequence here</div><br class="small-screen">
             <div id="one" class="click-tile"></div>
             <div id="two" class="click-tile"></div>
             <div id="three" class="click-tile"></div>
@@ -232,18 +252,18 @@
             You answered
 <!--The span keeps a tally of incorrect sequences (hidden on board)-->
             <span id="your-ans">0</span>
-            </div>
+            </div><br class="small-screen">
 <!--The answer tiles show the answer that the player types in-->
-            <div id="answer-one" class="click-tile-answer"></div>
-            <div id="answer-two" class="click-tile-answer"></div>
-            <div id="answer-three" class="click-tile-answer"></div>
-            <div id="answer-four" class="click-tile-answer"></div>
+            <div id="answer-one" class="click-tile"></div>
+            <div id="answer-two" class="click-tile"></div>
+            <div id="answer-three" class="click-tile"></div>
+            <div id="answer-four" class="click-tile"></div>
             <div id="answer-box">?</div>
         </div>
         
     </section>
     <footer>
     </footer>
-    <script src="script.js"></script>
+    <script src="assets/script.js"></script>
   </body>
 </html>

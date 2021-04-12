@@ -21,7 +21,6 @@
 #bigU {
     color: blue;
     margin-left: 15px;
-
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -227,7 +226,6 @@
     width: 400px;
     height: 40px;
     margin: auto;
-    margin-top: 10px;
 }
 
 /*Row of coloured tiles to show answer*/
@@ -246,15 +244,7 @@
   margin-top: 20px;
   float: left;
 }
-.click-tile-answer {
-  height: 40px;
-  width: 40px;
-  border-radius: 8px;
-  border: 2px solid black;
-  margin-left: 10px;
-  margin-top: 20px;
-  float: left;
-}
+
 /*coloured tiles to tap/ click*/
 #one {
   background-color: red;
@@ -269,7 +259,7 @@
   background-color: yellow;
 }
 #tap-sequence {
-  width: 120px;
+  width: 140px;
   padding-top: 10px;
   height: 30px;
   text-align: center;
@@ -359,7 +349,7 @@ ul {
     background-image: url(https://cdn.pixabay.com/photo/2021/02/09/16/56/marble-5999144_960_720.jpg);
 }
 /* responsive design - smaller than desktop */
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1050px) {
 #instructions {
     float: unset;
     margin: auto;
@@ -371,93 +361,112 @@ ul {
 }
 /* responsive design - smaller than 450px */
 @media screen and (max-width: 450px) {
-#game-name {
-    width: 260px;
-     font-size: 20px;
+
+ /* Dropdown Button */
+.dropbtn {
+  background-color: orange;
+  color: black;
+  padding: 3px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 4px;
 }
-.mini-tile {
-    width: 30px;
-    height: 20px;
-    padding-top: 5px;
-    border-radius: 6px;
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
 }
-#instructions {
-    float: unset;
-    margin: auto;
-    margin-top: 20px;
-  }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 280px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  border: 2px solid black;
+  z-index: 1;
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: white;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: yellow;} 
+
   #stick-man {
       display: none;
   }
-  .tile {
-    height: 30px;
-    width: 30px;
-    border-radius: 6px;
+#game-name {
+    width: 130px;
+    height: 24px;
+}
+#bigO {
+    font-size: 20px;
 }
 #bigU {
-    margin-left: 40px;
+    margin-left: 5px;
+    font-size: 20px;
 }
 #bigT {
-    margin-left: 80px;
+    margin-left: 5px;
+    font-size: 20px;
 }
 #bigR {
-    margin-left: 120px;
+    margin-left: 5px;
+    font-size: 20px;
 }
 #big-U {
-    margin-left: 160px;
+    margin-left: 5px;
+    font-size: 20px;
 }
 #bigN {
-    margin-left: 200px;
+    margin-left: 5px;
+    font-size: 20px;
 }
-#big-arrow {
-    margin-left: 240px;  
+
+.link {
+  display: none;
 }
-#instructions {
-    font-size: 12px;
-    width: 260px;
+.link-vertical {
+    display: none;
 }
 .tile {
+    margin-left: 2px;
     height: 30px;
     width: 30px;
-    border-radius: 6px;
 }
-.link {
-  height: 8px;
-  width: 8px;
-  border-radius: 0px;
+#games-played {
+    height: 15px;
+    font-size: 14px;
 }
-.link-vr {
-  height: 12px;
-  width: 8px;
-  border-radius: 0px;
-  margin-left: 225px;
-}
-.link-vl {
-  height: 12px;
-  width: 8px;
-  border-radius: 0px;
-  margin-left: 40px;
-}
+
 #first-row {
-  height: 30px;
-  width: 220px;
+  width: 180px;
+  height: 35px;
 }
 #second-row {
-  height: 30px;
-  width: 220px;
+  width: 180px;
+  height: 35px;
 }
 #third-row {
-  height: 30px;
-  width: 220px;
+  width: 180px;
+  height: 35px;
 }
 #fourth-row {
-  height: 30px;
-  width: 220px;
+  width: 180px;
+  height: 35px;
 }
 #fifth-row {
-  height: 30px;
-  width: 220px;
-  margin-bottom: 20px;
+  width: 180px;
+  height: 35px;
 }
 .label {
   position: absolute;
@@ -471,48 +480,89 @@ ul {
   display: none;
 }
 #sequence {
-    width: 260px;
-    height: 30px;
+    width: 200px;
+    height: 80px;
     float: unset;
+    margin-top: 5px;
+}
+#tap-sequence {
+    margin-right: 10px;
+    height: 20px;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+#one {
+    float: left;
+    margin-top: 5px;
+}
+#two {
+    float: left;
+    margin-top: 5px;
+}
+#three {
+    float: left;
+    margin-top: 5px;
+}
+#four {
+    float: right;
+    margin-top: 5px;
 }
 #answer {
-    width: 240px;
+    width: 200px;
+    height: 80px;
+    margin-top: 5px;
+}
+#your-answer {
+    margin-right: 90px;
+    height: 20px;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+#answer-one {
+    margin-top: 5px;
+}
+#answer-two {
+    margin-top: 5px;
+}
+#answer-three {
+    margin-top: 5px;
+}
+#answer-four {
+    margin-top: 5px;
 }
 #answer-box {
-  height: 30px;
+  height: 25px;
   width: 250px;
   font-size: 18px;
-  margin-top: 120px;
+  margin-top: 75px;
 }
 
 .click-tile {
   height: 30px;
   width: 30px;
   margin-left: 15px;
-  margin-top: 15px;
 }
-.click-tile-answer {
-  border: 2px solid black;
-  margin-left: 5px;
-  margin-top: 20px;
-  float: left;
-  border-radius: 5px;
-  width: 15px;
-  height: 15px;
-}
-
 .click_t {
     height: 30px;
-  width: 70px;
-  margin-left: 5px;
-  margin-top: 15px;
-  margin: auto;
-  border-radius: 8px;
-  border: 2px solid black;
+    width: 70px;
+    margin-left: 5px;
+    margin-top: 15px;
+     margin: auto;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+#instructions {
+    display: none;
 }
 }
 @media screen and (min-width: 450px) {
 .number-small {
   display: none;
+}
+.dropdown {
+    display: none;
+}
+.small-screen {
+    display: none;
 }
 }
