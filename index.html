@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -11,7 +11,7 @@
   <body id="backgroundimage">
     <header>
         <div id="game-name">
-<!--Title on tiles-->
+<!--Title with individual letters-->
           <div id="bigO">O</div>
           <div id="bigU">U</div>
           <div id="bigT">T</div>
@@ -21,6 +21,7 @@
         </div>
     </header>
     <section>
+<!--Game instructions for large screens-->
         <div id="instructions">
             <h2>INSTRUCTIONS</h2>
             <ul>
@@ -39,9 +40,11 @@
                 <li>A feedback message appears in the bottom box</li>
                 <li>If you like, click 'Hard Mode' then 'Play'</li>
                 <li>Hard Mode changes the timings of the game!</li>
-                <p id="good-luck">Good Luck!</p>
             </ul>
+            <p class="good-luck">Good Luck!</p>
         </div>
+<!--Dropdown menu of instructions for medium or small screens-->
+        <div id="dropdown-limit">
         <div class="dropdown">
         <button class="dropbtn">Instructions</button>
             <div class="dropdown-content">
@@ -60,54 +63,58 @@
                 A feedback message appears in the bottom box<br>
                 If you like, click 'Hard Mode' then 'Play'<br>
                 Hard Mode changes the timings of the game!<br>
-                <p id="good-luck">Good Luck!</p>
+                <p class="good-luck">Good Luck!</p>
             </div>
+        </div>
         </div>
 <!--Image of a stick man used on right of desktop display-->
         <div id="stick-man"><img src="https://cdn.pixabay.com/photo/2014/04/03/00/40/runner-309053_960_720.png" alt=""></div>
+
+<!--Game control panel-->
         <div id="game-controls">
             <div id="play">
                 Play <br>
                 <i class="fas fa-arrow-right"></i>
             </div>
-            <div id="hard-mode">
-                Hard Mode <br>
-                <i class="fas fa-skull"></i>
-            </div>
             <div id="reset">
                 Reset <br>
                 <i class="fas fa-redo"></i>
             </div>
+            <div id="hard-mode">
+                Hard Mode <br>
+                <i class="fas fa-skull"></i>
+            </div> 
         </div>
         <div id="games-played"></div>
         <div id="main-board">
-<!--The 2 tiles that form the board game are set out in the code below-->
+<!--The tiles that form the board game are set out in the code below-->
             <div id="first-row">
-                <div class="tile main-tile">
+                <div class="main-tile">
+<!--Player is represented by a star that moves round board-->
                     <div class="starry"><i class="far fa-star"></i></div>
                     <span class="number-large" >1</span>
                     <span class="number-small" ></span>
                     <span class="label">Start</span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">2</span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">3</span>
 <!--Colour sequence is displayed when player reaches tiles with a question mark -->
                     <span><i class="fas fa-question"></i></span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">4</span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile adjust">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">5</span>
                 </div>
@@ -116,29 +123,29 @@
                 <div class="link-vr"></div>
             </div>
             <div id="second-row">
-                <div class="tile main-tile adjust-up">
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">6</span>
                     <span><i class="fas fa-question"></i></span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">7</span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">8</span>
                 </div>
                 <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">9</span>
                     <span><i class="fas fa-question"></i></span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile adjust">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">10</span>
                 </div>
@@ -147,29 +154,29 @@
                 <div class="link-vl"></div>
             </div>
             <div id="third-row">
-                <div class="tile main-tile adjust-up">
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">11</span>
                     <span><i class="fas fa-question"></i></span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">12</span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">13</span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">14</span>
                     <span><i class="fas fa-question"></i></span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile adjust">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">15</span>
                 </div>
@@ -178,29 +185,29 @@
                 <div class="link-vr"></div>
             </div>
             <div id="fourth-row">
-                <div class="tile main-tile adjust-up">
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">16</span>
                     <span><i class="fas fa-question"></i></span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">17</span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">18</span>
                     <span><i class="fas fa-question"></i></span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">19</span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile adjust">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">20</span>
                 </div>
@@ -209,29 +216,29 @@
                 <div class="link-vl"></div>
             </div>
             <div id="fifth-row">
-                <div class="tile main-tile adjust-up">
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">21</span>
                     <span><i class="fas fa-question"></i></span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">22</span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number">23</span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span><i class="fas fa-question"></i></span>
                     <span class="number">24</span>
                 </div>
-                <div class="tile link"></div>
-                <div class="tile main-tile">
+                <div class="link"></div>
+                <div class="main-tile">
                     <div class="starry"></div>
                     <span class="number-large">25</span>
                      <span class="number-small"></span>

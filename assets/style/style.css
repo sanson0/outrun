@@ -1,18 +1,22 @@
 #game-name {
   font-size: 32px;
   font-weight: 900;
-  width: 220px;
+  width: 245px;
   height: 40px;
   margin: auto;
-  position: relative;
   background-color: yellow;
   border-radius: 8px;
   border: 2px solid black;
 }
 
+/* CSS variables*/
+:root {
+    --leftmargin: 15px;
+}
 /*The title is spelt out in large letters on their own tiles (see mini-tile above*/
 #bigO {
     color: red;
+    margin-left: var(--leftmargin);
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -20,7 +24,7 @@
 }
 #bigU {
     color: blue;
-    margin-left: 15px;
+    margin-left: var(--leftmargin);
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -28,7 +32,7 @@
 }
 #bigT {
     color: green;
-    margin-left: 15px;
+    margin-left: var(--leftmargin);
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -36,7 +40,7 @@
 }
 #bigR {
     color: red;
-    margin-left: 15px;
+    margin-left: var(--leftmargin);
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -44,7 +48,7 @@
 }
 #big-U {
     color: blue;
-    margin-left: 15px;
+    margin-left: var(--leftmargin);
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -52,7 +56,8 @@
 }
 #bigN {
     color: green;
-    margin-left: 15px;
+    margin-left: var(--leftmargin);
+    margin-right: 15px;
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -61,14 +66,14 @@
 
 #game-controls {
     height: 40px;
-    width: 250px;
+    width: 260px;
     margin: auto;
 }
 /*Play button allows the player to start a new game*/
 #play {
     height: 40px;
     width: 60px;
-    margin-top: 10px;
+    margin-top: 25px;
     background-color: lightgreen;
     font-size: 16px;
     font-weight: 700;
@@ -83,7 +88,7 @@
     height: 38px;
     width: 100px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 25px;
     padding-top: 2px;
     float: right;
     background-color: yellow;
@@ -94,7 +99,7 @@
     height: 40px;
     width: 60px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 25px;
     margin-left: 5px;
     float: left;
     background-color: orange;
@@ -103,7 +108,7 @@
 }
 #games-played {
     height: 30px;
-    width: 200px;
+    width: 260px;
     margin: auto;
     margin-bottom: 10px;
     margin-top: 30px;
@@ -115,8 +120,9 @@
     margin: auto;
     margin-top: 20px;
 }
-.tile {
-  height: 40px;
+
+.main-tile {
+    height: 40px;
   width: 40px;
   border-radius: 8px;
   border: 2px solid black;
@@ -151,7 +157,9 @@
   border-radius: 0px;
   background-color: black;
   margin-top: 15px;
+  float: left;
 }
+
 /*Vertical link between tiles, right side(link-vr) or left side(link-vl)*/
 .link-vertical {
   margin: auto;
@@ -174,18 +182,18 @@
   border-radius: 0px;
   background-color: black;
   position: absolute;
-  margin-left: 15px;
+  margin-left: 25px;
   margin-top: 3px;
 }
 /*Rows of the board game tiles*/
 #first-row {
   height: 40px;
-  width: 280px;
+  width: 265px;
   margin: auto;
 }
 #second-row {
   height: 40px;
-  width: 280px;
+  width: 265px;
   margin: auto;
 }
 /*Allows tile order to go from right to left on second row*/
@@ -197,12 +205,12 @@
 }
 #third-row {
   height: 40px;
-  width: 280px;
+  width: 265px;
   margin: auto;
 }
 #fourth-row {
   height: 40px;
-  width: 280px;
+  width: 265px;
   margin: auto;
 }
 /*Allows tile order to go from right to left on fourth row*/
@@ -214,7 +222,7 @@
 }
 #fifth-row {
   height: 40px;
-  width: 280px;
+  width: 265px;
   margin: auto;
 }
 /*Background colour of star representing player*/
@@ -338,7 +346,7 @@ img {
 ul {
     color: black;
 }
-#good-luck {
+.good-luck {
     font-size: 16px;
     text-transform: uppercase;
     color: red;
@@ -351,17 +359,15 @@ ul {
 /* responsive design - smaller than desktop */
 @media screen and (max-width: 1050px) {
 #instructions {
-    float: unset;
     margin: auto;
     margin-top: 20px;
   }
   #stick-man {
       display: none;
   }
+  #instructions {
+    display: none;
 }
-/* responsive design - smaller than 450px */
-@media screen and (max-width: 450px) {
-
  /* Dropdown Button */
 .dropbtn {
   background-color: orange;
@@ -370,15 +376,21 @@ ul {
   font-size: 16px;
   border: 2px solid black;
   border-radius: 4px;
+  float: left;
+  margin-top: 5px;
+  
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
-  
 }
-
+#dropdown-limit {
+    margin: auto;
+    height: 15px;
+    width: 250px;
+}
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
@@ -391,7 +403,6 @@ ul {
   z-index: 1;
 }
 
-
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: white;}
 
@@ -400,15 +411,25 @@ ul {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: yellow;} 
+}
+@media screen and (min-width: 1050px) {
+    .dropdown {
+    display: none;
+}
+}
+
+/* responsive design - smaller than 450px */
+@media screen and (max-width: 450px) {
 
   #stick-man {
       display: none;
   }
 #game-name {
-    width: 130px;
+    width: 125px;
     height: 24px;
 }
 #bigO {
+    margin-left: 5px;
     font-size: 20px;
 }
 #bigU {
@@ -429,6 +450,7 @@ ul {
 }
 #bigN {
     margin-left: 5px;
+    margin-right: 5px;
     font-size: 20px;
 }
 
@@ -438,10 +460,11 @@ ul {
 .link-vertical {
     display: none;
 }
-.tile {
+.main-tile {
     margin-left: 2px;
     height: 30px;
     width: 30px;
+    border-width: 2px 4px 2px 2px;
 }
 #games-played {
     height: 15px;
@@ -449,23 +472,23 @@ ul {
 }
 
 #first-row {
-  width: 180px;
+  width: 190px;
   height: 35px;
 }
 #second-row {
-  width: 180px;
+  width: 190px;
   height: 35px;
 }
 #third-row {
-  width: 180px;
+  width: 190px;
   height: 35px;
 }
 #fourth-row {
-  width: 180px;
+  width: 190px;
   height: 35px;
 }
 #fifth-row {
-  width: 180px;
+  width: 190px;
   height: 35px;
 }
 .label {
@@ -542,26 +565,13 @@ ul {
   width: 30px;
   margin-left: 15px;
 }
-.click_t {
-    height: 30px;
-    width: 70px;
-    margin-left: 5px;
-    margin-top: 15px;
-     margin: auto;
-    border-radius: 8px;
-    border: 2px solid black;
-}
-#instructions {
-    display: none;
-}
+
 }
 @media screen and (min-width: 450px) {
 .number-small {
   display: none;
 }
-.dropdown {
-    display: none;
-}
+
 .small-screen {
     display: none;
 }

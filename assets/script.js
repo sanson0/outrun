@@ -47,6 +47,7 @@ let times =1000;
     setTimeout(function(){ square(); },times*j);
 
     // produce array
+
     if (j===0) {
         var numR0=numR;
         }
@@ -58,7 +59,6 @@ let times =1000;
         }
 
     let numRandom = [numR0, numR1, numR2, numR];
-
 
     //count total number of clicks 'Tap sequence here'
     let button = document.getElementById("sequence");
@@ -85,7 +85,7 @@ let times =1000;
     }
 
     //player types in sequence
-    
+    function playerTypes() {
        let buttonOne = document.getElementById("one");
     buttonOne.addEventListener("click", function () {
     setAnswerColors("red", "0")
@@ -105,9 +105,11 @@ let times =1000;
     buttonFour.addEventListener("click", function () {
     setAnswerColors("yellow", "3")
     });
-
+    }
+    playerTypes();
     //new array
     function lookUp() {
+        
     let colNum1;
     colNum1 = document.getElementById("answer-one");
     let colorNumber1;
@@ -127,12 +129,13 @@ let times =1000;
     colNum4 = document.getElementById("answer-four");
     let colorNumber4;
     colorNumber4 = colNum4.innerHTML;
-
+        
     let colNumber1 = Number(colorNumber1);
     let colNumber2 = Number(colorNumber2);
     let colNumber3 = Number(colorNumber3);
     let colNumber4 = Number(colorNumber4);
-
+       
+    function answerboxMessage() {
     let myBox = document.getElementById('answer-box');
     let yourAns = document.getElementById('your-ans');
     if (colNumber1 !== numRandom[0]) {
@@ -154,7 +157,9 @@ let times =1000;
     else {
         myBox.innerHTML = "Well done!";
         yourAns.innerHTML = "0";
+         }
         }
+        setTimeout(function(){answerboxMessage(); }, 200);
     }
     let timer = 4000;
     //Check if hard mode button selected
@@ -164,7 +169,12 @@ let times =1000;
         timer=6000;
     };  
      setTimeout(function(){lookUp(); }, 10000);
+
      function hideButtons() {
+         let buttonOne = document.getElementById("one");
+         let buttonTwo = document.getElementById("two");
+         let buttonThree = document.getElementById("three");
+         let buttonFour = document.getElementById("four");
         buttonOne.style.visibility = "hidden"; 
         buttonTwo.style.visibility = "hidden";
         buttonThree.style.visibility = "hidden";
@@ -172,6 +182,10 @@ let times =1000;
      }
 
      function showButtons() {
+         let buttonOne = document.getElementById("one");
+         let buttonTwo = document.getElementById("two");
+         let buttonThree = document.getElementById("three");
+         let buttonFour = document.getElementById("four");
         buttonOne.style.visibility = "visible"; 
         buttonTwo.style.visibility = "visible";
         buttonThree.style.visibility = "visible";
@@ -179,17 +193,21 @@ let times =1000;
      }
      setTimeout(function(){hideButtons(); }, 500);
      setTimeout(function(){showButtons(); }, timer);
-
-    let myBox = document.getElementById('answer-box');
-    setTimeout(function(){myBox.innerHTML = "";},11500)
-    colNum1 = document.getElementById("answer-one");
-    colNum2 = document.getElementById("answer-two");
-    colNum3 = document.getElementById("answer-three");
-    colNum4 = document.getElementById("answer-four");
-    setTimeout(function(){colNum1.style.backgroundColor = "white";}, 11500)
-    setTimeout(function(){colNum2.style.backgroundColor = "white";}, 11500)
-    setTimeout(function(){colNum3.style.backgroundColor = "white";}, 11500)
-    setTimeout(function(){colNum4.style.backgroundColor = "white";}, 11500)
+    
+     function blankTiles() {
+        let myBox = document.getElementById('answer-box');
+        myBox.innerHTML = "";
+        colNum1 = document.getElementById("answer-one");
+        colNum2 = document.getElementById("answer-two");
+        colNum3 = document.getElementById("answer-three");
+        colNum4 = document.getElementById("answer-four");
+        colNum1.style.backgroundColor = "white";
+        colNum2.style.backgroundColor = "white";
+        colNum3.style.backgroundColor = "white";
+        colNum4.style.backgroundColor = "white";
+     }
+    
+    setTimeout(function(){blankTiles(); },11500)
     }
 }
 
@@ -229,16 +247,19 @@ function boardGame() {
         },k*z+x);
     }
 }
+// Hard Mode button changes the timings of the game making it more difficult
 let hardMode = document.getElementById("hard-mode");
 hardMode.addEventListener("click", function () {
     hardMode.style.backgroundColor = "red"
     });
     
+// Reset button refreshes page when clicked
 let resetButton = document.getElementById("reset");
     resetButton.addEventListener("click", function () {
         location.reload();
     });
 
+// Tally of games won in a row
 let playButton= document.getElementById("play");
 amount=0;
         playButton.onclick = function() {
@@ -249,7 +270,7 @@ amount=0;
         tally.style.backgroundColor = "yellow";
         tally.style.border = "2px solid black"
         };
-
+// Play button function
 playButton.addEventListener("click",boardGame);
 
 
