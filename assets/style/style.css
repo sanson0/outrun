@@ -267,7 +267,7 @@
   background-color: yellow;
 }
 #tap-sequence {
-  width: 140px;
+  width: 160px;
   padding-top: 10px;
   height: 30px;
   text-align: center;
@@ -277,6 +277,7 @@
   width: 120px;
   padding-top: 10px;
   height: 30px;
+  margin-right: 35px;
   text-align: center;
   position: relative;
   background-color: white;
@@ -416,12 +417,18 @@ ul {
     .dropdown {
     display: none;
 }
+#stickman-ipad {
+    display: none;
+}
 }
 
 /* responsive design - smaller than 450px */
 @media screen and (max-width: 450px) {
 
   #stick-man {
+      display: none;
+  }
+  #stickman-ipad {
       display: none;
   }
 #game-name {
@@ -555,7 +562,7 @@ ul {
 }
 #answer-box {
   height: 25px;
-  width: 250px;
+  width: 240px;
   font-size: 18px;
   margin-top: 75px;
 }
@@ -574,5 +581,11 @@ ul {
 
 .small-screen {
     display: none;
+}
+#stickman-ipad {
+    max-width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-top: 120px;
 }
 }

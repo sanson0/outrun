@@ -31,11 +31,39 @@ The colours are shown as background colours of the tiles, so the boardgame still
 As a player, I would like:-
 * to be entertained!
 * a game that requires memorising patterns so that I can improve my memory
-* a gae that requires coordination so that I can improve it.
+* a game that requires coordination so that I can improve it.
 * to progress through the game so that I can escape danger.
 * a lot of interaction with the game so I feel involved.
 * an easy and hard mode so I can remain challenged as I improve at the game.
 
+## Deployment and testing
+### Deployment
+### testing
+There are several methods for testing:-
+1. Manual testing of functionality of the game
+2. Manual testing of responsive design
+3. Manual testing for features required in the game
+4. Testing of code using code validators
+5. Testing of performance using Lighthouse (in Chrome browser)
+
+Testing of functionality of the game ideally requires a flow chart of actions.
+A list of functions to check:-
+* Game loads
+* If hard mode selected, button changes colour and game timings are altered.
+* If play selected, game starts
+* Tally updates with games in a row won
+* Star moves on board
+* If the reset button is clicked at any time in the game or after it finishes, the game reloads, any progress is lost.
+* Colour sequence starts
+* Coloured tiles below the main board disapppear (so the sequence has to be memorised).
+* Player taps in sequence using coloured tiles, when they are visible
+* Game checks the sequence entered against the sequence displayed.
+* If the sequence is correct, a message saying 'Well done' is displayed.
+* If the 
+Testing of responsive design is demonstrated by screenshots of the game at different screen widths.
+Responsive design testing has been done on different devices as an extra check.
+Features present in the gae were checked against the list of features in this READme file.
+Testing of the code was done using the W3C code validator for HTML and CSS.
 ## Bugs and design issues
 
 A design problem occurred with the sequence of colours. The colours are produced randomly by JavaScript
