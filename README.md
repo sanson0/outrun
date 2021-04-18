@@ -44,9 +44,12 @@ There are several methods for testing:-
 2. Manual testing of responsive design
 3. Manual testing for features required in the game
 4. Testing of code using code validators
-5. Testing of performance using Lighthouse (in Chrome browser)
+5. Testing of code using JShint
+6. Testing of performance using Lighthouse (in Chrome browser)
 
 Testing of functionality of the game ideally requires a flow chart of actions.
+[link to flowchart of the game](assets/docs/flowchart.pdf)
+
 A list of functions to check:-
 * Game loads
 * If hard mode selected, button changes colour and game timings are altered.
@@ -54,16 +57,24 @@ A list of functions to check:-
 * Tally updates with games in a row won
 * Star moves on board
 * If the reset button is clicked at any time in the game or after it finishes, the game reloads, any progress is lost.
-* Colour sequence starts
-* Coloured tiles below the main board disapppear (so the sequence has to be memorised).
+* Colour sequence starts when question mark on board is reached.
+* Coloured tiles below the main board disappear (so the sequence has to be memorised).
 * Player taps in sequence using coloured tiles, when they are visible
+* Colours selected appear in row next to 'You answered'
 * Game checks the sequence entered against the sequence displayed.
 * If the sequence is correct, a message saying 'Well done' is displayed.
-* If the 
+* The colours in row next to 'You answered' and the 'Well done' message disappear.
+* If the sequence is wrong, a message saying 'Oh no you were caught' is displayed.
+* If the sequence is wrong, the game resets after message is displayed, progress is lost.
+* The star continues to move around the board until the next question mark or last tile is reached.
+* If the last tile is reached, a message saying 'Well played' appears under control panel.
+
 Testing of responsive design is demonstrated by screenshots of the game at different screen widths.
 Responsive design testing has been done on different devices as an extra check.
-Features present in the gae were checked against the list of features in this READme file.
+Features present in the game were checked against the list of features in this READme file.
 Testing of the code was done using the W3C code validator for HTML and CSS.
+[link to code validator results](assets/docs/code_validators.pdf)
+
 ## Bugs and design issues
 
 A design problem occurred with the sequence of colours. The colours are produced randomly by JavaScript

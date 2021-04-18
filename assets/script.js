@@ -1,3 +1,4 @@
+// jshint esversion: 6
 let tileRow;
 const NUMBER_OF_TILES = 25; // This number represents number of blocks in game.
 const NUMBER_OF_COLORS = 4; // This number represents number of colours in sequence.
@@ -37,7 +38,7 @@ function squareSequence() {
         let hardMode = document.getElementById("hard-mode");
         if (hardMode.style.backgroundColor === "red") {
         time=100;
-    }; 
+    }
 //All tiles of board game turn white in between tiles displaying colours
     setTimeout(function(){squareWhite();}, time);
     }
@@ -88,22 +89,22 @@ let times =1000;
     function playerTypes() {
        let buttonOne = document.getElementById("one");
     buttonOne.addEventListener("click", function () {
-    setAnswerColors("red", "0")
+    setAnswerColors("red", "0");
     });
 
     let buttonTwo = document.getElementById("two");
     buttonTwo.addEventListener("click", function () {
-    setAnswerColors("blue", "1")
+    setAnswerColors("blue", "1");
     });
     
     let buttonThree = document.getElementById("three");
     buttonThree.addEventListener("click", function () {
-    setAnswerColors("green", "2")
+    setAnswerColors("green", "2");
     });
 
     let buttonFour = document.getElementById("four");
     buttonFour.addEventListener("click", function () {
-    setAnswerColors("yellow", "3")
+    setAnswerColors("yellow", "3");
     });
     }
     playerTypes();
@@ -167,7 +168,7 @@ let times =1000;
         let hardMode = document.getElementById("hard-mode");
         if (hardMode.style.backgroundColor === "red") {
         timer=6000;
-    };  
+    }
      setTimeout(function(){lookUp(); }, 10000);
 
      function hideButtons() {
@@ -207,7 +208,7 @@ let times =1000;
         colNum4.style.backgroundColor = "white";
      }
     
-    setTimeout(function(){blankTiles(); },11500)
+    setTimeout(function(){blankTiles(); },11500);
     }
 }
 
@@ -250,7 +251,7 @@ function boardGame() {
 // Hard Mode button changes the timings of the game making it more difficult
 let hardMode = document.getElementById("hard-mode");
 hardMode.addEventListener("click", function () {
-    hardMode.style.backgroundColor = "red"
+    hardMode.style.backgroundColor = "red";
     });
     
 // Reset button refreshes page when clicked
@@ -264,14 +265,11 @@ let playButton= document.getElementById("play");
 amount=0;
         playButton.onclick = function() {
         amount +=1;
-        tallyNumber=amount-1
+        tallyNumber=amount-1;
         let tally= document.getElementById("games-played");
         tally.innerHTML = "Games won in a row:"+ tallyNumber;
         tally.style.backgroundColor = "yellow";
-        tally.style.border = "2px solid black"
+        tally.style.border = "2px solid black";
         };
 // Play button function
 playButton.addEventListener("click",boardGame);
-
-
- 
