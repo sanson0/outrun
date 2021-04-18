@@ -48,7 +48,7 @@ let times =1000;
     setTimeout(function(){ square(); },times*j);
 
     // produce array
-
+    
     if (j===0) {
         var numR0=numR;
         }
@@ -213,13 +213,13 @@ let times =1000;
 }
 
 function boardGame() {
-    tileStar = document.getElementsByClassName("starry");
+    let tileStar = document.getElementsByClassName("starry");
     tileStar[24].innerHTML = "";
-    tileShadow = document.getElementsByClassName("main-tile");
+    let tileShadow = document.getElementsByClassName("main-tile");
     ans = document.getElementById("your-ans");
     let z=1000;
     
-    const valueMap = [0, 0, 0, 12000, 12000, 12000, 24000, 24000, 24000, 36000, 36000, 48000, 48000, 48000, 60000, 60000, 72000, 72000, 84000, 84000, 84000, 96000, 96000, 96000, 108000]
+    const valueMap = [0, 0, 0, 12000, 12000, 12000, 24000, 24000, 24000, 36000, 36000, 48000, 48000, 48000, 60000, 60000, 72000, 72000, 84000, 84000, 84000, 96000, 96000, 96000, 108000];
     for ( let k=1; k < NUMBER_OF_TILES; k++ ) {
       const x=valueMap[k];
       
@@ -229,7 +229,7 @@ function boardGame() {
    
     location.reload();
     }
-    const numberIn = [2, 5, 8, 10, 13, 15, 17, 20 , 23]
+    const numberIn = [2, 5, 8, 10, 13, 15, 17, 20 , 23];
       if (numberIn.includes(k)){
           squareSequence();
         }
@@ -243,7 +243,7 @@ function boardGame() {
             }
             if (k===24) {
                 let tally= document.getElementById("games-played");
-                tally.innerHTML = "Well played!"
+                tally.innerHTML = "Well played!";
             }
         },k*z+x);
     }
@@ -262,10 +262,10 @@ let resetButton = document.getElementById("reset");
 
 // Tally of games won in a row
 let playButton= document.getElementById("play");
-amount=0;
+let amount=0;
         playButton.onclick = function() {
         amount +=1;
-        tallyNumber=amount-1;
+        let tallyNumber=amount-1;
         let tally= document.getElementById("games-played");
         tally.innerHTML = "Games won in a row:"+ tallyNumber;
         tally.style.backgroundColor = "yellow";

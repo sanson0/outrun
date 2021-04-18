@@ -70,10 +70,13 @@ A list of functions to check:-
 * If the last tile is reached, a message saying 'Well played' appears under control panel.
 
 Testing of responsive design is demonstrated by screenshots of the game at different screen widths.
+[link to responsive design results](assets/docs/responsive_design.pdf)
 Responsive design testing has been done on different devices as an extra check.
 Features present in the game were checked against the list of features in this READme file.
 Testing of the code was done using the W3C code validator for HTML and CSS.
 [link to code validator results](assets/docs/code_validators.pdf)
+Testing of the web game was done using Lighthouse (in the Chrome web browser)
+[link to Lighthouse results](assets/docs/lighthouse.pdf)
 
 ## Bugs and design issues
 
