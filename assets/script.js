@@ -2,7 +2,7 @@
 let tileRow;
 const NUMBER_OF_TILES = 25; // This number represents number of blocks in game.
 const NUMBER_OF_COLORS = 4; // This number represents number of colours in sequence.
-
+let count;
 // All board game tiles are turned white by this function
 function squareWhite() {
   
@@ -12,6 +12,28 @@ function squareWhite() {
     tileRow[index].style.backgroundColor = 'white';
     }
 }
+     function blankTiles() {
+        let myBox = document.getElementById('answer-box');
+        myBox.innerHTML = "";
+        let colNum1 = document.getElementById("answer-one");
+        let colNum2 = document.getElementById("answer-two");
+        let colNum3 = document.getElementById("answer-three");
+        let colNum4 = document.getElementById("answer-four");
+        colNum1.style.backgroundColor = "white";
+        colNum2.style.backgroundColor = "white";
+        colNum3.style.backgroundColor = "white";
+        colNum4.style.backgroundColor = "white";
+     }
+      function showButtons() {
+         let buttonOne = document.getElementById("one");
+         let buttonTwo = document.getElementById("two");
+         let buttonThree = document.getElementById("three");
+         let buttonFour = document.getElementById("four");
+        buttonOne.style.visibility = "visible"; 
+        buttonTwo.style.visibility = "visible";
+        buttonThree.style.visibility = "visible";
+        buttonFour.style.visibility = "visible";
+     }
 //All tiles display a sequence of colours with this function
 function squareSequence() {
 
@@ -181,32 +203,9 @@ let times =1000;
         buttonThree.style.visibility = "hidden";
         buttonFour.style.visibility = "hidden";
      }
-
-     function showButtons() {
-         let buttonOne = document.getElementById("one");
-         let buttonTwo = document.getElementById("two");
-         let buttonThree = document.getElementById("three");
-         let buttonFour = document.getElementById("four");
-        buttonOne.style.visibility = "visible"; 
-        buttonTwo.style.visibility = "visible";
-        buttonThree.style.visibility = "visible";
-        buttonFour.style.visibility = "visible";
-     }
+         
      setTimeout(function(){hideButtons(); }, 500);
      setTimeout(function(){showButtons(); }, timer);
-    
-     function blankTiles() {
-        let myBox = document.getElementById('answer-box');
-        myBox.innerHTML = "";
-        colNum1 = document.getElementById("answer-one");
-        colNum2 = document.getElementById("answer-two");
-        colNum3 = document.getElementById("answer-three");
-        colNum4 = document.getElementById("answer-four");
-        colNum1.style.backgroundColor = "white";
-        colNum2.style.backgroundColor = "white";
-        colNum3.style.backgroundColor = "white";
-        colNum4.style.backgroundColor = "white";
-     }
     
     setTimeout(function(){blankTiles(); },11500);
     }
@@ -216,7 +215,7 @@ function boardGame() {
     let tileStar = document.getElementsByClassName("starry");
     tileStar[24].innerHTML = "";
     let tileShadow = document.getElementsByClassName("main-tile");
-    ans = document.getElementById("your-ans");
+    let ans = document.getElementById("your-ans");
     let z=1000;
     
     const valueMap = [0, 0, 0, 12000, 12000, 12000, 24000, 24000, 24000, 36000, 36000, 48000, 48000, 48000, 60000, 60000, 72000, 72000, 84000, 84000, 84000, 96000, 96000, 96000, 108000];
