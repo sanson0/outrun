@@ -285,23 +285,23 @@
 /*Tiles to show sequence clicked/ tapped*/
 /*Tally of clicks/ taps*/
 #answer-one {
-    font-size: 0;
+    font-size: 10;
     background-color: white;
 }
 #answer-two {
-    font-size: 0;
+    font-size: 10;
     background-color: white;
 }
 #answer-three {
-    font-size: 0;
+    font-size: 10;
     background-color: white;
 }
 #answer-four {
-    font-size: 0;
+    font-size: 10;
     background-color: white;
 }
 #your-ans {
-    font-size: 0;
+    font-size: 10;
 }
 /*The answer box shows messages such as 'Well done!' or 'Better luck next time...'*/
 #answer-box {

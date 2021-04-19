@@ -34,6 +34,54 @@ function squareWhite() {
         buttonThree.style.visibility = "visible";
         buttonFour.style.visibility = "visible";
      }
+      function hideButtons() {
+         let buttonOne = document.getElementById("one");
+         let buttonTwo = document.getElementById("two");
+         let buttonThree = document.getElementById("three");
+         let buttonFour = document.getElementById("four");
+        buttonOne.style.visibility = "hidden"; 
+        buttonTwo.style.visibility = "hidden";
+        buttonThree.style.visibility = "hidden";
+        buttonFour.style.visibility = "hidden";
+     }
+     function setAnswerColors(color, value){
+    let elmAnswer;
+
+    if (count === 1) {
+        elmAnswer = document.getElementById("answer-one");
+    } else if (count === 2) {
+        elmAnswer = document.getElementById("answer-two");
+    } else if (count === 3) {
+        elmAnswer = document.getElementById("answer-three");
+    } else {
+        elmAnswer = document.getElementById("answer-four");
+    }
+
+    elmAnswer.style.backgroundColor = color;
+    elmAnswer.innerHTML = value;
+    }
+    //player types in sequence
+    function playerTypes() {
+       let buttonOne = document.getElementById("one");
+    buttonOne.addEventListener("click", function () {
+    setAnswerColors("red", "0");
+    });
+
+    let buttonTwo = document.getElementById("two");
+    buttonTwo.addEventListener("click", function () {
+    setAnswerColors("blue", "1");
+    });
+    
+    let buttonThree = document.getElementById("three");
+    buttonThree.addEventListener("click", function () {
+    setAnswerColors("green", "2");
+    });
+
+    let buttonFour = document.getElementById("four");
+    buttonFour.addEventListener("click", function () {
+    setAnswerColors("yellow", "3");
+    });
+    }
 //All tiles display a sequence of colours with this function
 function squareSequence() {
 
@@ -70,15 +118,17 @@ let times =1000;
     setTimeout(function(){ square(); },times*j);
 
     // produce array
-    
+    var numR0;
+    var numR1;
+    var numR2;
     if (j===0) {
-        var numR0=numR;
+        numR0=numR;
         }
     if (j===1) {
-        var numR1=numR;
+        numR1=numR;
         }
     if (j===2) {
-        var numR2=numR;
+        numR2=numR;
         }
 
     let numRandom = [numR0, numR1, numR2, numR];
@@ -90,45 +140,7 @@ let times =1000;
     button.onclick = function() {
         count +=1;
     };
-    function setAnswerColors(color, value){
-    let elmAnswer;
-
-    if (count === 1) {
-        elmAnswer = document.getElementById("answer-one");
-    } else if (count === 2) {
-        elmAnswer = document.getElementById("answer-two");
-    } else if (count === 3) {
-        elmAnswer = document.getElementById("answer-three");
-    } else {
-        elmAnswer = document.getElementById("answer-four");
-    }
-
-    elmAnswer.style.backgroundColor = color;
-    elmAnswer.innerHTML = value;
-    }
-
-    //player types in sequence
-    function playerTypes() {
-       let buttonOne = document.getElementById("one");
-    buttonOne.addEventListener("click", function () {
-    setAnswerColors("red", "0");
-    });
-
-    let buttonTwo = document.getElementById("two");
-    buttonTwo.addEventListener("click", function () {
-    setAnswerColors("blue", "1");
-    });
     
-    let buttonThree = document.getElementById("three");
-    buttonThree.addEventListener("click", function () {
-    setAnswerColors("green", "2");
-    });
-
-    let buttonFour = document.getElementById("four");
-    buttonFour.addEventListener("click", function () {
-    setAnswerColors("yellow", "3");
-    });
-    }
     playerTypes();
     //new array
     function lookUp() {
@@ -192,17 +204,6 @@ let times =1000;
         timer=6000;
     }
      setTimeout(function(){lookUp(); }, 10000);
-
-     function hideButtons() {
-         let buttonOne = document.getElementById("one");
-         let buttonTwo = document.getElementById("two");
-         let buttonThree = document.getElementById("three");
-         let buttonFour = document.getElementById("four");
-        buttonOne.style.visibility = "hidden"; 
-        buttonTwo.style.visibility = "hidden";
-        buttonThree.style.visibility = "hidden";
-        buttonFour.style.visibility = "hidden";
-     }
          
      setTimeout(function(){hideButtons(); }, 500);
      setTimeout(function(){showButtons(); }, timer);
