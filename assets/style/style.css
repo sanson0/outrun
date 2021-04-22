@@ -225,7 +225,7 @@
   margin: auto;
 }
 /*Background colour of star representing player*/
-.far {
+.fa-star {
   background-color: yellow;
 }
 /*Row of coloured tiles to tap/ click*/
@@ -285,23 +285,23 @@
 /*Tiles to show sequence clicked/ tapped*/
 /*Tally of clicks/ taps*/
 #answer-one {
-    font-size: 10;
+    font-size: 0;
     background-color: white;
 }
 #answer-two {
-    font-size: 10;
+    font-size: 0;
     background-color: white;
 }
 #answer-three {
-    font-size: 10;
+    font-size: 0;
     background-color: white;
 }
 #answer-four {
-    font-size: 10;
+    font-size: 0;
     background-color: white;
 }
 #your-ans {
-    font-size: 10;
+    font-size: 0;
 }
 /*The answer box shows messages such as 'Well done!' or 'Better luck next time...'*/
 #answer-box {

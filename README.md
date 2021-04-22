@@ -1,31 +1,99 @@
 # Outrun
+This is a simple web game with boardgame layout and regular colour sequences to test your memory and
+also coordination as there is a time limit to input your answer. There is the option of a hard mode 
+if the normal settings are too easy. 
+Watch for The Shadow chasing you round the board, it will catch you if you get the sequences wrong!
+A tally of games won in a row appears at the top of the board. Instructions are available if needed.
 
-A memory game for milestone 2 project
+Good Luck!
 
-## User Experience
+NB. This game has been developed as the milestone 2 project of the Diploma in Software Development with The Code Institute.
 
-Purpose of this project:-
-* Entertainment
-* Improve memory
-* Improve coordination
+## Why make this game?
 
-Wireframes
-[link to wireframe view of the game](assets/docs/Outrun.pdf)
+This web game can be used:-
+* for entertainment
+* to improve memory
+* to improve coordination
+* to improve your speed
 
-## Features
+## Features of the game
 
-* Boardgame with 25 tiles
-* The player is represented by a star that moves from tile to tile
+* The game has a boardgame layout with 25 tiles in main area.
+* The player is represented by a star that moves from tile to tile.
 * When the player reaches a question mark, the tiles begin to show a sequence of colours.
-The colours are shown as background colours of the tiles, so the boardgame still shows.
+* The colours are shown as background colours of the tiles, so the boardgame still shows.
 * Colours consist of red, blue, green and yellow.
+* While the colour sequence shows, 4 tiles of different colours disappear (to stop cheating!)
 * When the sequence ends, the player is asked to type in the sequence according to colour,
- which is decided randomly by the program.
-* If the player gets it right, then the player keeps moving. Number of games won is recorded in a tally.
+ which is decided randomly by the program (4 tiles reappear).
+* If the player gets it right, then the player keeps moving. Number of games won (in a row) is recorded in a tally.
+* A correct sequence results in a message of "Well done!".
 * If the player gets it wrong, then the game stops and resets, progress is lost in terms of the tally.
+* A wrong sequence results in a message saying "Oh no, you were caught..."
 * After a short while, the beginning tiles turn black, this is the shadow chasing the player.
 * There is an explanation section containing rules of the game.
+* Regular positive feedback encourages the player to keep playing.
 
+Decisions on what to include were done with the help of a [feasibility study](assets/docs/what_to_include.pdf)
+
+Wireframes [link to wireframe view of the game](assets/docs/Outrun.pdf)
+
+### Features left to include
+It would be good to increase the difficulty level but allow multiple chances to type in a correct sequence.
+The player only has one chance to get it right at the moment before the game resets and loses progress.
+## Technologies used
+Click names for links to their websites (or useful sites).
+*   [HTML](https://html.spec.whatwg.org/)
+    * HTML code provides basic structure of a web page and proper formatting of text and images.
+*   [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+    * Cascading Style Sheets (CSS) allow modification of appearance of elements in the HTML file.
+*   [JavaScript](https://www.javascript.com/)
+    * Text-based programmimg language that converts a static web page into a more interactive page.
+*   [Github](https://github.com/)
+    * Github is a code hosting platform for version control and collaboration.
+*   [Gitpod](https://www.gitpod.io/)
+    * Online Integrated Development Environment (IDE) for Github
+*   [HTML validator](https://validator.w3.org/)
+    * HTML code validator to check for errors in HTML code.
+*   [CSS validator](https://jigsaw.w3.org/css-validator/)
+    * CSS code validator to check for errors in CSS code.
+*   [JShint](https://jshint.com/)
+    * JavaScript code quality checking tool.
+*   [Fontawesome](https://fontawesome.com)
+    * Fontawesome is very useful for icons such as the star, down arrow and question marks of the game.
+
+
+## Deployment
+The process of deploying the website is described in this section and instructions are 
+provided for deployment of changes to website.
+The Gitpod workspace was created from the new repository 'outrun' on Github. 
+To make changes to the website, log in to Gitpod to modify code within the workspace.
+Deploying the Website
+
+The website code was created/ modified in Gitpod, then all the files were saved.
+The following was typed at the Gitpod commmand line:-
+
+1.   Git add (files created/ modified)
+2.   git commit -m "commments on what was created or changed"
+3.   git push (this command transfers code from Gitpod to the repository in Github)
+4.   On the Github site, the settings menu was selected, this displayed a new screen.
+5.   In the section called 'Github Pages' where it says 'Source', the main branch was selected (the default branch).
+6.   'Save ' was clicked to display the URL of the website.
+
+The address of this website is https://sanson0.github.io/outrun/
+Making changes to the website
+
+Whenever new changes to the code are made in Gitpod (within the main branch), and these changes are saved, and commands
+git add, git commit and git push are used, the changes to the website are automatically deployed (so they appear at the
+address https://sanson0.github.io/outrun/). Currently there is only one branch.
+
+### Steps for making a local copy (cloning)
+1.  It is recomended that a folder is set up to receive the cloned copy of the repository.
+2.  Open the repository in Github and click 'Code'.
+3.  To clone the repository using HTTPS, under "Clone with HTTPS", click on the clipboard symbol.
+4.  Click on "Open with GitHub Desktop"
+5.  Follow the prompts in GitHub Desktop to complete the clone
 ## User stories
 
 As a player, I would like:-
@@ -36,9 +104,7 @@ As a player, I would like:-
 * a lot of interaction with the game so I feel involved.
 * an easy and hard mode so I can remain challenged as I improve at the game.
 
-## Deployment and testing
-### Deployment
-### testing
+## Testing
 There are several methods for testing:-
 1. Manual testing of functionality of the game
 2. Manual testing of responsive design
@@ -46,6 +112,7 @@ There are several methods for testing:-
 4. Testing of code using code validators
 5. Testing of code using JShint
 6. Testing of performance using Lighthouse (in Chrome browser)
+7. Testing the game on other players
 
 Testing of functionality of the game ideally requires a flow chart of actions.
 [link to flowchart of the game](assets/docs/flowchart.pdf)
@@ -75,6 +142,8 @@ Responsive design testing has been done on different devices as an extra check.
 Features present in the game were checked against the list of features in this READme file.
 Testing of the code was done using the W3C code validator for HTML and CSS.
 [link to code validator results](assets/docs/code_validators.pdf)
+Testing of the code was done using the JShint code quality checking tool.
+[link to JavaScript code quality checking tool results](assets/docs/JShint.pdf)
 Testing of the web game was done using Lighthouse (in the Chrome web browser)
 [link to Lighthouse results](assets/docs/lighthouse.pdf)
 
@@ -103,14 +172,29 @@ This prevents another problem from occurring. If the fault message was detected 
 by adjusting the loop number, the old game restarted as well as a new one when the play button was clicked.
 
 ## Credits
-
+### Content
 [geeks for geeks](www.geeksforgeeks.org) helped implement the for loop to allow a sequence to be set
 up of colours so there is a 1 sec delay each time:-
 setTimeout(function(){square();}, 1000*j);
 
-Thrown for a loop: understanding for loops and timeouts in JavaScript [free CodeCamp](www.freeCodeCamp.org)
+Thrown for a loop: understanding for loops and timeouts in JavaScript [free CodeCamp](www.freeCodeCamp.org).
+Thrown for a loop helped to implement the loop inside the function 'Boardgame' in JavaScript.
 
-Thanks to Mentor Nishant for advice on how many features to include in the game (so it was not too complicated),
+Thanks to Mentor Nishant for advice on how many features to include in the game,
 lots of advice on how to simplify code so that there is less of it, improving maintainability, decreasing 
 probability of bugs, improving understanding of code for someone new to the project. Also, suggestions on
-improving user experience, explanation of rules of game, tips on making the game's appearance look better.
+improving user experience, including explanation of rules of game and tips on making the game's appearance look better.
+
+W3 schools hoverable dropdown menu, using HTML and CSS, was used for the instructions on smaller devices. The dropdown 
+menu was adapted to display information instead of links, with changes to colours.
+[Dropdown menu](https://www.w3schools.com/howto/howto_css_dropdown.asp)
+
+GitHub Docs provided information on how to make a local copy of a repository.
+[Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
+### Media
+2 images were used in the game, both from [Pixabay](https://pixabay.com):-
+
+[Running figure](https://cdn.pixabay.com/photo/2014/04/03/00/40/runner-309053_960_720.png)
+
+[Marble background](https://cdn.pixabay.com/photo/2021/02/09/16/56/marble-5999144_960_720.jpg)
