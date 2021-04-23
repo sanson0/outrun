@@ -16,12 +16,13 @@ This web game can be used:-
 * to improve memory
 * to improve coordination
 * to improve your speed
+* to improve concentration
 
 ### User stories
 
 As a player, I would like:-
 * to be entertained!
-* a game that requires memorising patterns so that I can improve my memory
+* a game that requires memorising patterns so that I can improve my memory.
 * a game that requires coordination so that I can improve it.
 * to progress through the game so that I can escape danger.
 * a lot of interaction with the game so I feel involved.
@@ -47,7 +48,9 @@ As a player, I would like:-
 
 Decisions on what to include were done with the help of a [feasibility study](assets/docs/what_to_include.pdf)
 
-Wireframes [link to wireframe view of the game](assets/docs/Outrun.pdf)
+Original wireframe [link to wireframe view of the game](assets/docs/Outrun.pdf).
+
+The game design evolved into [a new wireframe](assets/docs/Outrun_new.pdf).
 
 ### Features left to include
 It would be good to increase the difficulty level but allow multiple chances to type in a correct sequence.
@@ -80,22 +83,23 @@ Click names for links to their websites (or useful sites).
 ## Deployment
 The process of deploying the website is described in this section and instructions are 
 provided for deployment of changes to website.
-The Gitpod workspace was created from the new repository 'outrun' on Github. 
+The Gitpod workspace was created from the new repository 'Outrun' on Github. 
 To make changes to the website, log in to Gitpod to modify code within the workspace.
-Deploying the Website
 
+### Deploying the Website
 The website code was created/ modified in Gitpod, then all the files were saved.
 The following was typed at the Gitpod commmand line:-
 
 1.   Git add (files created/ modified)
-2.   git commit -m "commments on what was created or changed"
-3.   git push (this command transfers code from Gitpod to the repository in Github)
+2.   Git commit -m "commments on what was created or changed"
+3.   Git push (this command transfers code from Gitpod to the repository in Github)
 4.   On the Github site, the settings menu was selected, this displayed a new screen.
 5.   In the section called 'Github Pages' where it says 'Source', the main branch was selected (the default branch).
 6.   'Save ' was clicked to display the URL of the website.
 
 The address of this website is https://sanson0.github.io/outrun/
-Making changes to the website
+
+### Making changes to the website
 
 Whenever new changes to the code are made in Gitpod (within the main branch), and these changes are saved, and commands
 git add, git commit and git push are used, the changes to the website are automatically deployed (so they appear at the
@@ -118,6 +122,7 @@ There are several methods for testing:-
 6. Testing of performance using Lighthouse (in Chrome browser)
 7. Testing the game on other players
 8. Testing in Replit
+9. Testing in different web browsers
 
 Testing of functionality of the game ideally requires a flow chart of actions.
 [link to flowchart of the game](assets/docs/flowchart.pdf)
@@ -140,6 +145,10 @@ A list of functions to check:-
 * If the sequence is wrong, the game resets after message is displayed, progress is lost.
 * The star continues to move around the board until the next question mark or last tile is reached.
 * If the last tile is reached, a message saying 'Well played' appears under control panel.
+
+[Screenshots of testing](assets/docs/game_in_action.pdf) were taken as the game was in progress and show some of the main
+features of the game. This testing was repeated for different screen sizes, mobile device screen shots were shown in the 
+testing file.
 
 Testing of responsive design is demonstrated by screenshots of the game at different screen widths.
 [link to responsive design results](assets/docs/responsive_design.pdf)

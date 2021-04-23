@@ -12,54 +12,56 @@
 /* CSS variables*/
 :root {
     --leftmargin: 15px;
+    --padtop: 2px;
+    --padbottom: 2px;
 }
 /*The title is spelt out in large letters on their own tiles (see mini-tile above*/
 #bigO {
     color: red;
     margin-left: var(--leftmargin);
     text-align: center;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: var(--padtop);
+    padding-bottom: var(--padbottom);
     float: left;
 }
 #bigU {
     color: blue;
     margin-left: var(--leftmargin);
     text-align: center;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: var(--padtop);
+    padding-bottom: var(--padbottom);
     float: left;
 }
 #bigT {
     color: green;
     margin-left: var(--leftmargin);
     text-align: center;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: var(--padtop);
+    padding-bottom: var(--padbottom);
     float: left;
 }
 #bigR {
     color: red;
     margin-left: var(--leftmargin);
     text-align: center;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: var(--padtop);
+    padding-bottom: var(--padbottom);
     float: left;
 }
 #big-U {
     color: blue;
     margin-left: var(--leftmargin);
     text-align: center;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: var(--padtop);
+    padding-bottom: var(--padbottom);
     float: left;
 }
 #bigN {
     color: green;
     margin-right: 15px;
     text-align: center;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: var(--padtop);
+    padding-bottom: var(--padbottom);
     float: right;
 }
 
@@ -271,6 +273,7 @@
   height: 30px;
   text-align: center;
   background-color: white;
+  font-weight: 600;
 }
 #your-answer {
   width: 120px;
@@ -280,7 +283,7 @@
   text-align: center;
   position: relative;
   background-color: white;
-
+  font-weight: 600;
 }
 /*Tiles to show sequence clicked/ tapped*/
 /*Tally of clicks/ taps*/
@@ -434,29 +437,34 @@ ul {
     width: 125px;
     height: 24px;
 }
+/* CSS variables*/
+:root {
+    --leftmargin-small: 5px;
+    --fontsize-small: 20px;
+}
 #bigO {
-    margin-left: 5px;
-    font-size: 20px;
+    margin-left: var(--leftmargin-small);
+    font-size: var(--fontsize-small);
 }
 #bigU {
-    margin-left: 5px;
-    font-size: 20px;
+    margin-left: var(--leftmargin-small);
+    font-size: var(--fontsize-small);
 }
 #bigT {
-    margin-left: 5px;
-    font-size: 20px;
+    margin-left: var(--leftmargin-small);
+    font-size: var(--fontsize-small);
 }
 #bigR {
-    margin-left: 5px;
-    font-size: 20px;
+    margin-left: var(--leftmargin-small);
+    font-size: var(--fontsize-small);
 }
 #big-U {
-    margin-left: 5px;
-    font-size: 20px;
+    margin-left: var(--leftmargin-small);
+    font-size: var(--fontsize-small);
 }
 #bigN {
     margin-right: 8px;
-    font-size: 20px;
+    font-size: var(--fontsize-small);
 }
 
 .link {
@@ -472,8 +480,9 @@ ul {
     border-width: 2px 4px 2px 2px;
 }
 #games-played {
-    height: 15px;
-    font-size: 14px;
+    height: 18px;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 
 #first-row {
