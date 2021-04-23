@@ -17,6 +17,16 @@ This web game can be used:-
 * to improve coordination
 * to improve your speed
 
+### User stories
+
+As a player, I would like:-
+* to be entertained!
+* a game that requires memorising patterns so that I can improve my memory
+* a game that requires coordination so that I can improve it.
+* to progress through the game so that I can escape danger.
+* a lot of interaction with the game so I feel involved.
+* an easy and hard mode so I can remain challenged as I improve at the game.
+
 ## Features of the game
 
 * The game has a boardgame layout with 25 tiles in main area.
@@ -42,6 +52,9 @@ Wireframes [link to wireframe view of the game](assets/docs/Outrun.pdf)
 ### Features left to include
 It would be good to increase the difficulty level but allow multiple chances to type in a correct sequence.
 The player only has one chance to get it right at the moment before the game resets and loses progress.
+
+Another feature that could be added is an extension of the colour sequence, so an increase from 4 colours for
+a harder game. Also, the sequence to remember could depend on shape displayed as well as colour.
 ## Technologies used
 Click names for links to their websites (or useful sites).
 *   [HTML](https://html.spec.whatwg.org/)
@@ -94,15 +107,6 @@ address https://sanson0.github.io/outrun/). Currently there is only one branch.
 3.  To clone the repository using HTTPS, under "Clone with HTTPS", click on the clipboard symbol.
 4.  Click on "Open with GitHub Desktop"
 5.  Follow the prompts in GitHub Desktop to complete the clone
-## User stories
-
-As a player, I would like:-
-* to be entertained!
-* a game that requires memorising patterns so that I can improve my memory
-* a game that requires coordination so that I can improve it.
-* to progress through the game so that I can escape danger.
-* a lot of interaction with the game so I feel involved.
-* an easy and hard mode so I can remain challenged as I improve at the game.
 
 ## Testing
 There are several methods for testing:-
@@ -113,6 +117,7 @@ There are several methods for testing:-
 5. Testing of code using JShint
 6. Testing of performance using Lighthouse (in Chrome browser)
 7. Testing the game on other players
+8. Testing in Replit
 
 Testing of functionality of the game ideally requires a flow chart of actions.
 [link to flowchart of the game](assets/docs/flowchart.pdf)
@@ -139,14 +144,24 @@ A list of functions to check:-
 Testing of responsive design is demonstrated by screenshots of the game at different screen widths.
 [link to responsive design results](assets/docs/responsive_design.pdf)
 Responsive design testing has been done on different devices as an extra check.
+
 Features present in the game were checked against the list of features in this READme file.
+
 Testing of the code was done using the W3C code validator for HTML and CSS.
 [link to code validator results](assets/docs/code_validators.pdf)
+
 Testing of the code was done using the JShint code quality checking tool.
 [link to JavaScript code quality checking tool results](assets/docs/JShint.pdf)
+
 Testing of the web game was done using Lighthouse (in the Chrome web browser)
 [link to Lighthouse results](assets/docs/lighthouse.pdf)
 
+Testing of the web game was done by other players to check if it was intuitive to play and if it was
+at a reasonable difficulty level. Too easy would be boring and too difficult would put people off playing.
+[Players test the game](assets/docs/other_players.pdf)
+
+Testing in Replit was done as an extra check. The repository for 'Outrun' was opened using Replit and the
+game was tested.
 ## Bugs and design issues
 
 A design problem occurred with the sequence of colours. The colours are produced randomly by JavaScript

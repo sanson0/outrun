@@ -270,6 +270,8 @@ playButton.onclick = function () {
     tally.innerHTML = "Games won in a row:" + tallyNumber;
     tally.style.backgroundColor = "yellow";
     tally.style.border = "2px solid black";
+    let tileStar = document.getElementsByClassName("starry");
+    tileStar[0].innerHTML = "";
 };
 // Play button function
 playButton.addEventListener("click", boardGame);
