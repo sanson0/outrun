@@ -57,7 +57,8 @@ It would be good to increase the difficulty level but allow multiple chances to 
 The player only has one chance to get it right at the moment before the game resets and loses progress.
 
 Another feature that could be added is an extension of the colour sequence, so an increase from 4 colours for
-a harder game. Also, the sequence to remember could depend on shape displayed as well as colour.
+a harder game. Also, the sequence to remember could depend on shape displayed as well as colour. Shape can be
+changed by displaying the colour sequence on selected tiles instead of all the tiles in the main board of the game.
 ## Technologies used
 Click names for links to their websites (or useful sites).
 *   [HTML](https://html.spec.whatwg.org/)
@@ -197,11 +198,11 @@ by adjusting the loop number, the old game restarted as well as a new one when t
 
 ## Credits
 ### Content
-[geeks for geeks](www.geeksforgeeks.org) helped implement the for loop to allow a sequence to be set
+[geeks for geeks](https://www.geeksforgeeks.org/) helped implement the for loop to allow a sequence to be set
 up of colours so there is a 1 sec delay each time:-
 setTimeout(function(){square();}, 1000*j);
 
-Thrown for a loop: understanding for loops and timeouts in JavaScript [free CodeCamp](www.freeCodeCamp.org).
+Thrown for a loop: understanding for loops and timeouts in JavaScript [free CodeCamp](https://www.freecodecamp.org/).
 Thrown for a loop helped to implement the loop inside the function 'Boardgame' in JavaScript.
 
 Thanks to Mentor Nishant for advice on how many features to include in the game,
